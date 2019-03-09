@@ -1,0 +1,528 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Risky Project Location:
+-----------------------
+The tools *should* handle project locations in any directory. However,
+due to bugs, placing projects in directories containing spaces in the
+path, or characters like ", ' and &, have had issues. We're working to
+eliminate these bugs, but to save yourself headaches you may want to
+move your project to a location where this is not a problem.
+H:\AS Workspace\Fault_V2.02
+     -                     
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea\
+* .idea\.name
+* .idea\compiler.xml
+* .idea\copyright\
+* .idea\copyright\profiles_settings.xml
+* .idea\dictionaries\
+* .idea\dictionaries\Li_Bin.xml
+* .idea\encodings.xml
+* .idea\libraries\
+* .idea\libraries\android_support_v7_appcompat.xml
+* .idea\libraries\dexedLibs.xml
+* .idea\libraries\dexedLibs1.xml
+* .idea\libraries\dexedLibs12.xml
+* .idea\libraries\dexedLibs13.xml
+* .idea\libraries\dexedLibs2.xml
+* .idea\libraries\dexedLibs3.xml
+* .idea\libraries\libs.xml
+* .idea\libraries\libs1.xml
+* .idea\libraries\libs12.xml
+* .idea\libraries\libs13.xml
+* .idea\libraries\libs2.xml
+* .idea\libraries\libs3.xml
+* .idea\libraries\src.xml
+* .idea\libraries\v7.xml
+* .idea\misc.xml
+* .idea\modules.xml
+* .idea\scopes\
+* .idea\scopes\scope_settings.xml
+* .idea\uiDesigner.xml
+* .idea\vcs.xml
+* .idea\workspace.xml
+* Fault_V2.0.iml
+* __MACOSX\
+* __MACOSX\._Fault_V2.0
+* __MACOSX\Fault_V2.0\
+* __MACOSX\Fault_V2.0\._.classpath
+* __MACOSX\Fault_V2.0\._.project
+* __MACOSX\Fault_V2.0\._.settings
+* __MACOSX\Fault_V2.0\._AndroidManifest.xml
+* __MACOSX\Fault_V2.0\._assets
+* __MACOSX\Fault_V2.0\._bin
+* __MACOSX\Fault_V2.0\._gen
+* __MACOSX\Fault_V2.0\._ic_launcher-web.png
+* __MACOSX\Fault_V2.0\._libs
+* __MACOSX\Fault_V2.0\._proguard-project.txt
+* __MACOSX\Fault_V2.0\._project.properties
+* __MACOSX\Fault_V2.0\._res
+* __MACOSX\Fault_V2.0\._src
+* __MACOSX\Fault_V2.0\.settings\
+* __MACOSX\Fault_V2.0\.settings\._org.eclipse.jdt.core.prefs
+* __MACOSX\Fault_V2.0\bin\
+* __MACOSX\Fault_V2.0\bin\._AndroidManifest.xml
+* __MACOSX\Fault_V2.0\bin\._Fault_V2.0.apk
+* __MACOSX\Fault_V2.0\bin\._R.txt
+* __MACOSX\Fault_V2.0\bin\._TimePicker.apk
+* __MACOSX\Fault_V2.0\bin\._classes
+* __MACOSX\Fault_V2.0\bin\._classes.dex
+* __MACOSX\Fault_V2.0\bin\._dexedLibs
+* __MACOSX\Fault_V2.0\bin\._jarlist.cache
+* __MACOSX\Fault_V2.0\bin\._res
+* __MACOSX\Fault_V2.0\bin\._resources.ap_
+* __MACOSX\Fault_V2.0\bin\classes\
+* __MACOSX\Fault_V2.0\bin\classes\._android
+* __MACOSX\Fault_V2.0\bin\classes\._com
+* __MACOSX\Fault_V2.0\bin\classes\._net
+* __MACOSX\Fault_V2.0\bin\classes\android\
+* __MACOSX\Fault_V2.0\bin\classes\android\._support
+* __MACOSX\Fault_V2.0\bin\classes\android\support\
+* __MACOSX\Fault_V2.0\bin\classes\android\support\._v7
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\._appcompat
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R$anim.class
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R$attr.class
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R$bool.class
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R$color.class
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R$dimen.class
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R$drawable.class
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R$id.class
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R$integer.class
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R$layout.class
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R$string.class
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R$style.class
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R$styleable.class
+* __MACOSX\Fault_V2.0\bin\classes\android\support\v7\appcompat\._R.class
+* __MACOSX\Fault_V2.0\bin\classes\com\
+* __MACOSX\Fault_V2.0\bin\classes\com\._example
+* __MACOSX\Fault_V2.0\bin\classes\com\example\
+* __MACOSX\Fault_V2.0\bin\classes\com\example\._Activity
+* __MACOSX\Fault_V2.0\bin\classes\com\example\._Adapter
+* __MACOSX\Fault_V2.0\bin\classes\com\example\._FileUtils
+* __MACOSX\Fault_V2.0\bin\classes\com\example\._MyChart
+* __MACOSX\Fault_V2.0\bin\classes\com\example\._MyPacketClass
+* __MACOSX\Fault_V2.0\bin\classes\com\example\._MyThread
+* __MACOSX\Fault_V2.0\bin\classes\com\example\._MyUtilClass
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._BuildConfig.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$10.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$2.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$3.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$4.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$5.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$6.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$7.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$8.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$9.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$UpdateCurDataInChartView_TimerTask.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$Update_reportData.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity$readCurData_From_File.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._CurData_Activity.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessData_Activity$1$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessData_Activity$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessData_Activity$2.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessData_Activity$3.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessData_Activity$4.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessData_Activity$5.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessData_Activity$6.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessData_Activity$7.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessData_Activity$MyTimerTask.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessData_Activity$ReadDimensionlessdata_Thread.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessData_Activity.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessHistoryData_Activity$1$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessHistoryData_Activity$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessHistoryData_Activity$2.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessHistoryData_Activity$3.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessHistoryData_Activity$ReadDimensionlessdata_Thread.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._DimensionlessHistoryData_Activity.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._GlobleVariable.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._ImportDataFromFile_Activity$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._ImportDataFromFile_Activity$2.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._ImportDataFromFile_Activity$3.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._ImportDataFromFile_Activity$4.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._ImportDataFromFile_Activity$5.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._ImportDataFromFile_Activity$6.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._ImportDataFromFile_Activity$7.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._ImportDataFromFile_Activity$readData_From_File.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._ImportDataFromFile_Activity.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._MainTab_Activity.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._OriginalData_Activity.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$anim.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$attr.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$bool.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$color.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$dimen.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$drawable.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$id.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$integer.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$layout.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$menu.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$string.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$style.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R$styleable.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Activity\._R.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Adapter\
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Adapter\._FileListViewAdapter$FileItemHolder.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Adapter\._FileListViewAdapter.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Adapter\._MyPagerAdapter.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Adapter\._MyReportListViewAdapter$reportViewHolder.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\Adapter\._MyReportListViewAdapter.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\FileUtils\
+* __MACOSX\Fault_V2.0\bin\classes\com\example\FileUtils\._ClassDealPCMdata.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\FileUtils\._ClassReadDimensionlessdata_From_HistoryFile$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\FileUtils\._ClassReadDimensionlessdata_From_HistoryFile$2.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\FileUtils\._ClassReadDimensionlessdata_From_HistoryFile.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\FileUtils\._ClassShowCurData$SaveNullDataTimerTask.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\FileUtils\._ClassShowCurData.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\FileUtils\._Class_FileTool.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\FileUtils\._Class_SortFileAtModifiedTime$MyComparator.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\FileUtils\._Class_SortFileAtModifiedTime.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyChart\
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyChart\._TimeChart.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyPacketClass\
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyPacketClass\._DimensionlessReport.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyThread\
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyThread\._ClassDrawPCMdata.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyThread\._ClassReadPCMdata_From_Mic$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyThread\._ClassReadPCMdata_From_Mic.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyThread\._ClassSaveDimensionless_Parameter_Data.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyThread\._ClassSavePCMdata$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyThread\._ClassSavePCMdata.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Report_first_item_pressed$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Report_first_item_pressed.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Report_second_item_pressed$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Report_second_item_pressed.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Report_third_item_pressed$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Report_third_item_pressed.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Show_first_item_pressed$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Show_first_item_pressed$RestartTimerTask_CallBack.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Show_first_item_pressed.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Show_second_item_pressed$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Show_second_item_pressed.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Show_third_item_pressed$1.class
+* __MACOSX\Fault_V2.0\bin\classes\com\example\MyUtilClass\._Show_third_item_pressed.class
+* __MACOSX\Fault_V2.0\bin\classes\net\
+* __MACOSX\Fault_V2.0\bin\classes\net\._simonvt
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\._menudrawer
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._BuildLayerFrameLayout$1.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._BuildLayerFrameLayout$2.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._BuildLayerFrameLayout.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._ColorDrawable$ColorState.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._ColorDrawable.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._DraggableDrawer$1.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._DraggableDrawer$2.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._DraggableDrawer$3.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._DraggableDrawer$4.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._DraggableDrawer.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._FloatScroller.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._MenuDrawer$1.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._MenuDrawer$2.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._MenuDrawer$OnDrawerStateChangeListener.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._MenuDrawer$OnInterceptMoveEventListener.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._MenuDrawer$SavedState$1.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._MenuDrawer$SavedState.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._MenuDrawer$Type.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._MenuDrawer.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._NoClickThroughFrameLayout.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._OverlayDrawer$1.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._OverlayDrawer.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._PeekInterpolator.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._Position.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._Scroller.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._SinusoidalInterpolator.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._SlideDrawable.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._SlidingDrawer.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._SmoothInterpolator.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._StaticDrawer.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._ViewHelper.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\._compat
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\compat\
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\compat\._ActionBarHelper.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\compat\._ActionBarHelperCompat$SetIndicatorInfo.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\compat\._ActionBarHelperCompat.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\compat\._ActionBarHelperNative$SetIndicatorInfo.class
+* __MACOSX\Fault_V2.0\bin\classes\net\simonvt\menudrawer\compat\._ActionBarHelperNative.class
+* __MACOSX\Fault_V2.0\bin\dexedLibs\
+* __MACOSX\Fault_V2.0\bin\dexedLibs\._achartengine-1.1.0-6decdaf7b203db0e83c243c79801e193.jar
+* __MACOSX\Fault_V2.0\bin\dexedLibs\._achartengine-1.1.0-92ab9356768fceffeeb1eb8907d07e56.jar
+* __MACOSX\Fault_V2.0\bin\dexedLibs\._android-support-v4-d5a784ef760ec2df0bc6ac91be8fe338.jar
+* __MACOSX\Fault_V2.0\bin\dexedLibs\._android-support-v7-appcompat-4908d8992358ac1d4334081b9fea0a30.jar
+* __MACOSX\Fault_V2.0\bin\dexedLibs\._appcompat_v7_14-21b000b8aae26f9cd65b899d8f6d8956.jar
+* __MACOSX\Fault_V2.0\bin\dexedLibs\._radial-menu-v4-db7849a16be69a5db1620ff80c5b553c.jar
+* __MACOSX\Fault_V2.0\bin\res\
+* __MACOSX\Fault_V2.0\bin\res\._crunch
+* __MACOSX\Fault_V2.0\bin\res\crunch\
+* __MACOSX\Fault_V2.0\bin\res\crunch\._drawable-hdpi
+* __MACOSX\Fault_V2.0\bin\res\crunch\._drawable-mdpi
+* __MACOSX\Fault_V2.0\bin\res\crunch\._drawable-xhdpi
+* __MACOSX\Fault_V2.0\bin\res\crunch\._drawable-xxhdpi
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._admin_logo.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._applogo.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._colletelogo.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._colletion_set.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._dir_logo.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._file_logo.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._ic_launcher.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._jifenlogo.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._lastdata_button.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._nextdata_button.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._orderlogo.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._pause.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._person.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._person_activity_head.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._personcheck.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._report.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._search.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._show_cur_data.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._show_dimensionless.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._show_original.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._showwave_button.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._start.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._startupdate.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._startupdate_click.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._state_logo.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._state_normal_logo.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._state_warning_logo.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._stopupdate.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._stopupdate_click.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-hdpi\._title_button_about.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-mdpi\
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-mdpi\._ic_launcher.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-xhdpi\
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-xhdpi\._ic_launcher.png
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-xxhdpi\
+* __MACOSX\Fault_V2.0\bin\res\crunch\drawable-xxhdpi\._ic_launcher.png
+* __MACOSX\Fault_V2.0\gen\
+* __MACOSX\Fault_V2.0\gen\._android
+* __MACOSX\Fault_V2.0\gen\._com
+* __MACOSX\Fault_V2.0\gen\android\
+* __MACOSX\Fault_V2.0\gen\android\._support
+* __MACOSX\Fault_V2.0\gen\android\support\
+* __MACOSX\Fault_V2.0\gen\android\support\._v7
+* __MACOSX\Fault_V2.0\gen\android\support\v7\
+* __MACOSX\Fault_V2.0\gen\android\support\v7\._appcompat
+* __MACOSX\Fault_V2.0\gen\android\support\v7\appcompat\
+* __MACOSX\Fault_V2.0\gen\android\support\v7\appcompat\._R.java
+* __MACOSX\Fault_V2.0\gen\com\
+* __MACOSX\Fault_V2.0\gen\com\._example
+* __MACOSX\Fault_V2.0\gen\com\example\
+* __MACOSX\Fault_V2.0\gen\com\example\._Activity
+* __MACOSX\Fault_V2.0\gen\com\example\Activity\
+* __MACOSX\Fault_V2.0\gen\com\example\Activity\._BuildConfig.java
+* __MACOSX\Fault_V2.0\gen\com\example\Activity\._R.java
+* __MACOSX\Fault_V2.0\libs\
+* __MACOSX\Fault_V2.0\libs\._achartengine-1.1.0.jar
+* __MACOSX\Fault_V2.0\libs\._android-support-v4.jar
+* __MACOSX\Fault_V2.0\libs\._radial-menu-v4.jar
+* __MACOSX\Fault_V2.0\res\
+* __MACOSX\Fault_V2.0\res\._drawable-hdpi
+* __MACOSX\Fault_V2.0\res\._drawable-ldpi
+* __MACOSX\Fault_V2.0\res\._drawable-mdpi
+* __MACOSX\Fault_V2.0\res\._drawable-xhdpi
+* __MACOSX\Fault_V2.0\res\._drawable-xxhdpi
+* __MACOSX\Fault_V2.0\res\._layout
+* __MACOSX\Fault_V2.0\res\._menu
+* __MACOSX\Fault_V2.0\res\._values
+* __MACOSX\Fault_V2.0\res\._values-v11
+* __MACOSX\Fault_V2.0\res\._values-v14
+* __MACOSX\Fault_V2.0\res\._values-w820dp
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._admin_logo.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._all_button_style.xml
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._applogo.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._colletelogo.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._colletion_set.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._dir_logo.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._file_logo.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._ic_launcher.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._jifenlogo.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._lastdata_button.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._left_tab_button1.xml
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._left_tab_button2.xml
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._left_tab_button3.xml
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._nextdata_button.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._orderlogo.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._pause.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._person.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._person_activity_head.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._personcheck.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._report.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._search.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._show_cur_data.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._show_dimensionless.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._show_original.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._showwave_button.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._start.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._startupdate.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._startupdate_click.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._state_logo.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._state_normal_logo.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._state_warning_logo.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._stopupdate.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._stopupdate_click.png
+* __MACOSX\Fault_V2.0\res\drawable-hdpi\._title_button_about.png
+* __MACOSX\Fault_V2.0\res\drawable-mdpi\
+* __MACOSX\Fault_V2.0\res\drawable-mdpi\._ic_launcher.png
+* __MACOSX\Fault_V2.0\res\drawable-xhdpi\
+* __MACOSX\Fault_V2.0\res\drawable-xhdpi\._ic_launcher.png
+* __MACOSX\Fault_V2.0\res\drawable-xxhdpi\
+* __MACOSX\Fault_V2.0\res\drawable-xxhdpi\._ic_launcher.png
+* __MACOSX\Fault_V2.0\res\layout\
+* __MACOSX\Fault_V2.0\res\layout\._activity_main.xml
+* __MACOSX\Fault_V2.0\res\layout\._activity_show_history_filelist.xml
+* __MACOSX\Fault_V2.0\res\layout\._activity_show_history_filelist_item.xml
+* __MACOSX\Fault_V2.0\res\layout\._cur_data_activity.xml
+* __MACOSX\Fault_V2.0\res\layout\._date_time_dialog.xml
+* __MACOSX\Fault_V2.0\res\layout\._dimensionless_data_activity.xml
+* __MACOSX\Fault_V2.0\res\layout\._dimensionless_history_activity.xml
+* __MACOSX\Fault_V2.0\res\layout\._import_data_activity.xml
+* __MACOSX\Fault_V2.0\res\layout\._import_originaldata_listitem.xml
+* __MACOSX\Fault_V2.0\res\layout\._report_menu.xml
+* __MACOSX\Fault_V2.0\res\layout\._report_menu_list.xml
+* __MACOSX\Fault_V2.0\res\layout\._set_report_interval_dialog.xml
+* __MACOSX\Fault_V2.0\res\layout\._set_report_update_time_dialog.xml
+* __MACOSX\Fault_V2.0\res\layout\._set_report_warning_line_dialog.xml
+* __MACOSX\Fault_V2.0\res\layout\._set_show_update_time_dialog.xml
+* __MACOSX\Fault_V2.0\res\menu\
+* __MACOSX\Fault_V2.0\res\menu\._main.xml
+* __MACOSX\Fault_V2.0\res\values-v11\
+* __MACOSX\Fault_V2.0\res\values-v11\._styles.xml
+* __MACOSX\Fault_V2.0\res\values-v14\
+* __MACOSX\Fault_V2.0\res\values-v14\._styles.xml
+* __MACOSX\Fault_V2.0\res\values-w820dp\
+* __MACOSX\Fault_V2.0\res\values-w820dp\._dimens.xml
+* __MACOSX\Fault_V2.0\res\values\
+* __MACOSX\Fault_V2.0\res\values\._attrs.xml
+* __MACOSX\Fault_V2.0\res\values\._colors.xml
+* __MACOSX\Fault_V2.0\res\values\._dimens.xml
+* __MACOSX\Fault_V2.0\res\values\._ids.xml
+* __MACOSX\Fault_V2.0\res\values\._strings.xml
+* __MACOSX\Fault_V2.0\res\values\._styles.xml
+* __MACOSX\Fault_V2.0\src\
+* __MACOSX\Fault_V2.0\src\._com
+* __MACOSX\Fault_V2.0\src\._net
+* __MACOSX\Fault_V2.0\src\com\
+* __MACOSX\Fault_V2.0\src\com\._example
+* __MACOSX\Fault_V2.0\src\com\example\
+* __MACOSX\Fault_V2.0\src\com\example\._Activity
+* __MACOSX\Fault_V2.0\src\com\example\._Adapter
+* __MACOSX\Fault_V2.0\src\com\example\._FileUtils
+* __MACOSX\Fault_V2.0\src\com\example\._MyChart
+* __MACOSX\Fault_V2.0\src\com\example\._MyPacketClass
+* __MACOSX\Fault_V2.0\src\com\example\._MyThread
+* __MACOSX\Fault_V2.0\src\com\example\._MyUtilClass
+* __MACOSX\Fault_V2.0\src\com\example\Activity\
+* __MACOSX\Fault_V2.0\src\com\example\Activity\._CurData_Activity.java
+* __MACOSX\Fault_V2.0\src\com\example\Activity\._DimensionlessData_Activity.java
+* __MACOSX\Fault_V2.0\src\com\example\Activity\._DimensionlessHistoryData_Activity.java
+* __MACOSX\Fault_V2.0\src\com\example\Activity\._GlobleVariable.java
+* __MACOSX\Fault_V2.0\src\com\example\Activity\._ImportDataFromFile_Activity.java
+* __MACOSX\Fault_V2.0\src\com\example\Activity\._MainTab_Activity.java
+* __MACOSX\Fault_V2.0\src\com\example\Activity\._OriginalData_Activity.java
+* __MACOSX\Fault_V2.0\src\com\example\Adapter\
+* __MACOSX\Fault_V2.0\src\com\example\Adapter\._FileListViewAdapter.java
+* __MACOSX\Fault_V2.0\src\com\example\Adapter\._MyPagerAdapter.java
+* __MACOSX\Fault_V2.0\src\com\example\Adapter\._MyReportListViewAdapter.java
+* __MACOSX\Fault_V2.0\src\com\example\FileUtils\
+* __MACOSX\Fault_V2.0\src\com\example\FileUtils\._ClassDealPCMdata.java
+* __MACOSX\Fault_V2.0\src\com\example\FileUtils\._ClassReadDimensionlessdata_From_HistoryFile.java
+* __MACOSX\Fault_V2.0\src\com\example\FileUtils\._ClassShowCurData.java
+* __MACOSX\Fault_V2.0\src\com\example\FileUtils\._Class_FileTool.java
+* __MACOSX\Fault_V2.0\src\com\example\FileUtils\._Class_SortFileAtModifiedTime.java
+* __MACOSX\Fault_V2.0\src\com\example\MyChart\
+* __MACOSX\Fault_V2.0\src\com\example\MyChart\._TimeChart.java
+* __MACOSX\Fault_V2.0\src\com\example\MyPacketClass\
+* __MACOSX\Fault_V2.0\src\com\example\MyPacketClass\._DimensionlessReport.java
+* __MACOSX\Fault_V2.0\src\com\example\MyThread\
+* __MACOSX\Fault_V2.0\src\com\example\MyThread\._ClassDrawPCMdata.java
+* __MACOSX\Fault_V2.0\src\com\example\MyThread\._ClassReadPCMdata_From_Mic.java
+* __MACOSX\Fault_V2.0\src\com\example\MyThread\._ClassSaveDimensionless_Parameter_Data.java
+* __MACOSX\Fault_V2.0\src\com\example\MyThread\._ClassSavePCMdata.java
+* __MACOSX\Fault_V2.0\src\com\example\MyUtilClass\
+* __MACOSX\Fault_V2.0\src\com\example\MyUtilClass\._Report_first_item_pressed.java
+* __MACOSX\Fault_V2.0\src\com\example\MyUtilClass\._Report_second_item_pressed.java
+* __MACOSX\Fault_V2.0\src\com\example\MyUtilClass\._Report_third_item_pressed.java
+* __MACOSX\Fault_V2.0\src\com\example\MyUtilClass\._Show_first_item_pressed.java
+* __MACOSX\Fault_V2.0\src\com\example\MyUtilClass\._Show_second_item_pressed.java
+* __MACOSX\Fault_V2.0\src\com\example\MyUtilClass\._Show_third_item_pressed.java
+* __MACOSX\Fault_V2.0\src\net\
+* __MACOSX\Fault_V2.0\src\net\._simonvt
+* __MACOSX\Fault_V2.0\src\net\simonvt\
+* __MACOSX\Fault_V2.0\src\net\simonvt\._menudrawer
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._BuildLayerFrameLayout.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._ColorDrawable.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._DraggableDrawer.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._FloatScroller.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._MenuDrawer.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._NoClickThroughFrameLayout.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._OverlayDrawer.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._PeekInterpolator.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._Position.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._Scroller.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._SinusoidalInterpolator.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._SlideDrawable.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._SlidingDrawer.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._SmoothInterpolator.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._StaticDrawer.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._ViewHelper.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\._compat
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\compat\
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\compat\._ActionBarHelper.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\compat\._ActionBarHelperCompat.java
+* __MACOSX\Fault_V2.0\src\net\simonvt\menudrawer\compat\._ActionBarHelperNative.java
+* ic_launcher-web.png
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets
+* libs\achartengine-1.1.0.jar => app\libs\achartengine-1.1.0.jar
+* libs\radial-menu-v4.jar => app\libs\radial-menu-v4.jar
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

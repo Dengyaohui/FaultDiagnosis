@@ -1,0 +1,92 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#292421"
+    android:padding="0dp"
+    >
+    <!-- 可切换界面 -->
+    <TabHost 
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+       	    android:background="#fff0f1f1"
+            >
+        	<!-- 左侧切换界面操作栏 -->
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:padding="0dp"
+                >
+            	<FrameLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+                <RadioGroup 
+                    android:id="@+id/main_Radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    >
+                    <!-- 按钮的风格在style.xml中设置 -->
+	                <RadioButton
+	                    android:id="@+id/radio_CurData"
+	                    android:layout_weight="1"
+	                    android:text="实时采集" 
+	                    android:drawableTop="@drawable/show_cur_data"
+	                    style="@style/main_Left_tab_button"
+	                    android:background="@drawable/left_tab_button1"
+	                    />
+
+	                <RadioButton
+	                    android:id="@+id/radio_dimensionlessData"
+	                    android:layout_weight="1"
+	                    android:drawableTop="@drawable/show_dimensionless"
+	                    android:text="无量纲指标" 
+	                    style="@style/main_Left_tab_button"
+	                    android:background="@drawable/left_tab_button2"
+	                    />
+	
+	                <RadioButton
+	                    android:id="@+id/radio_originalData"
+	                    android:layout_weight="1"
+	                    android:text="导入数据" 
+	                    android:drawableTop="@drawable/show_original"
+	                    style="@style/main_Left_tab_button"
+	                    android:background="@drawable/left_tab_button3"
+	                    />
+                </RadioGroup>
+            </FrameLayout>
+            </LinearLayout>
+            <!-- Tab -->
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                >
+                <!-- 内容页 -->
+                <FrameLayout 
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    ></FrameLayout>
+                <!-- 标签页 (不可见)-->
+                <TabWidget 
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.0"
+                    android:visibility="gone"
+                    ></TabWidget>
+            </LinearLayout>
+        </LinearLayout>
+    </TabHost>
+    
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="H:\AS Workspace\FaultDiagnosis\app\libs\achartengine-1.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="9932e3fb9fbe54e80873e77f72a99f79e33b3250">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\achartengine-1.1.0_e2ad1394cf291e30ffe8539e35e3a4b03e5ce184.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\exploded-aar\com.android.support\support-compat\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-26.0.0-alpha1_9261a131168710fc465b26d56aa32427f2f61b18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\exploded-aar\com.android.support\support-fragment\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-26.0.0-alpha1_b187fa3d4e723b8097993985cdb2561b665ea38f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-26.0.0-alpha1_4679fc8c15a07233f526587270dbe584177a9f35.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\support-annotations-26.0.0-alpha1_e2d8db5f28878ee1f3bacd4a22e46eba1088da21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-26.0.0-alpha1_6b62e1a93d1c4ae6bc356c55693dc6a16eaa5940.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-26.0.0-alpha1_a12622d090251b7a5214ba056dbd18be631d27a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-26.0.0-alpha1_58df59c228a862c9aa6f757c34f290e377a31f33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\AS Workspace\FaultDiagnosis\app\libs\radial-menu-v4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="5d8365e03c7b428815d3d8584332b1df298cbb9c">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\radial-menu-v4_fd15de894f07580fbdf1c4932944109e9c793ed6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-26.0.0-alpha1_c91535a39f3b82f07fb486969927f6839e6c1418.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-26.0.0-alpha1_81b6e768fd0f46b1c3e1081bb3555ed254d817cb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\26.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-26.0.0-alpha1_bbda35f78d45404c4b57890e9d97c15c7890b643.jar" />
+    </item>
+
+</items>

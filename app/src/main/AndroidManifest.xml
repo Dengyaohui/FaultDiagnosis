@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.example.Activity"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.Activity.MainTab_Activity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- 实时采集界面 -->
+        <activity android:name="com.example.Activity.CurData_Activity" android:screenOrientation="portrait"></activity>
+        <!-- 无量纲指标界面 -->
+        <activity android:name="com.example.Activity.DimensionlessData_Activity" android:screenOrientation="portrait"></activity>
+        <!-- 无量纲指标界面（自定义时间显示） -->
+        <activity android:name="com.example.Activity.DimensionlessHistoryData_Activity" android:screenOrientation="portrait"></activity>
+        <!-- 原始数据 -->
+        <activity android:name="com.example.Activity.OriginalData_Activity" android:screenOrientation="portrait"></activity>
+        <!-- 文件列表显示 -->
+        <activity android:name="com.example.Activity.ImportDataFromFile_Activity" android:screenOrientation="portrait"></activity>
+    </application>
+
+    <!-- 采集音频信号权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+	<!-- 读写SD卡权限 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+</manifest>

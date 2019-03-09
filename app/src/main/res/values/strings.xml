@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 侧滑菜单 -->
+    <string name="md__drawerOpenIndicatorDesc">Close drawer</string>
+    <string name="md__drawerClosedIndicatorDesc">Open drawer</string>
+    
+    <string name="app_name">故障诊断系统</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="pause">暂停更新</string>
+    <string name="set">设置</string>
+    <string name="report">诊断报告</string>
+    
+    <!-- 圆环操作按钮需要用到的字符串 -->
+	<string name="Set_show">显示设置</string>
+	<string name="Set_collection">采样设置</string>
+	<string name="Set_report">诊断设置</string>
+	<string name="close">Close</string>
+	<string name="Set_collection_item1">量程</string>
+	<string name="Set_collection_item2">频率</string>
+	<string name="Set_collection_item3">点数</string>
+	<string name="Set_show_item1">刷新周期</string>
+	<string name="Set_show_item2">显示范围</string>
+	<string name="Set_show_item3">指标线</string>
+	<string name="Set_report_item1">诊断间隔</string>
+	<string name="Set_report_item2">更新时间</string>
+	<string name="Set_report_item3">警告线</string>
+
+</resources>
