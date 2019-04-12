@@ -1,9 +1,13 @@
 package com.example.Activity;
 
-import android.R.integer;
 import android.os.Environment;
 
 public class GlobleVariable {
+
+/**
+ *说明接收数据的方式，false为现场，true为云端
+ */
+	public static boolean ReadFromWeb;
 
 	/**
 	 * SD卡路径名
@@ -13,17 +17,21 @@ public class GlobleVariable {
 	/**
 	 * 故障诊断数据保存的文件夹
 	 */
-	public final static String DATA_SAVE_DIR = "故障诊断数据2";
+	public final static String DATA_SAVE_DIR = "故障诊断数据";
+//	public final static String WEB_DATA_SAVE_DIR = "故障诊断云端数据";
 //	public final static String DIMENSION_LES_SAVE_DIR = "无量纲诊断数据";
 	/**
 	 * 当前每秒原始数据文件夹
 	 */
 	public final static String CUR_ORIGINAL_DATA_PER_1S = "每秒原始数据";
+	public final static String WEB_CUR_ORIGINAL_DATA_PER_1S = "云端每秒原始数据";
 	public final static String CUR_ORIGINAL_DATA_PER_5MIN = "每5分钟原始数据";
+	public final static String WEB_CUR_ORIGINAL_DATA_PER_5MIN = "云端每5分钟原始数据";
 	/**
 	 * 当前每秒无量纲指标文件夹
 	 */
 	public final static String CUR_DIMENSION_LESS_PER_1S      = "每秒无量纲指标";
+	public final static String WEB_CUR_DIMENSION_LESS_PER_1S      = "云端每秒无量纲指标";
 	/**
 	 * 当前每5分钟无量纲指标文件夹
 	 */

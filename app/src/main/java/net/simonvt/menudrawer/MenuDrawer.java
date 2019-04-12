@@ -272,7 +272,7 @@ import android.view.animation.Interpolator;
      * The size of the menu (width or height depending on the gravity).
      */
     protected int mMenuSize;
-    public static int Set_mMenuSize = 480;
+    public static int Set_mMenuSize = 320;
     /**
      * Indicates whether the menu is currently visible.
      */

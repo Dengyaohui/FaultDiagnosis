@@ -2,49 +2,53 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
+    android:orientation="vertical"
     android:background="#ffffff"
     >
     
 	<!-- 标签栏 -->
-	<LinearLayout 
+    <LinearLayout
+        android:background="#84AF9B"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
+        android:layout_height="40dp"
         android:gravity="center"
+        android:orientation="horizontal"
         >
-        <TextView 
-            android:layout_width="0dp"
+
+        <TextView
+            android:gravity="left"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="指标名称"
+            android:layout_weight="0.8"
+            android:text="指标"
             android:textSize="20sp"
-            />
-        <TextView 
+            android:layout_width="0dp"/>
+
+        <TextView
+            android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="指标数值"
-            android:textSize="20sp"
-            />
-        <TextView 
+            android:layout_weight="1.5"
+            android:text="数值"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:text="报警状态"
-            android:textSize="20sp"
-            />
-    </LinearLayout>
+            android:textSize="20sp"/>
+</LinearLayout>
+
     <!-- List -->
     <LinearLayout 
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
         >
     	<ListView 
-		android:id="@+id/reportList"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        />
+		    android:id="@+id/reportList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
     </LinearLayout>
 </LinearLayout>

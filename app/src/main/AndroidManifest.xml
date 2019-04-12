@@ -22,20 +22,32 @@
         </activity>
         
         <!-- 实时采集界面 -->
-        <activity android:name="com.example.Activity.CurData_Activity" android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.example.Activity.CurData_Activity"
+            android:screenOrientation="portrait"/>
         <!-- 无量纲指标界面 -->
-        <activity android:name="com.example.Activity.DimensionlessData_Activity" android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.example.Activity.DimensionlessData_Activity"
+            android:screenOrientation="portrait"/>
         <!-- 无量纲指标界面（自定义时间显示） -->
-        <activity android:name="com.example.Activity.DimensionlessHistoryData_Activity" android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.example.Activity.DimensionlessHistoryData_Activity"
+            android:screenOrientation="portrait"/>
         <!-- 原始数据 -->
-        <activity android:name="com.example.Activity.OriginalData_Activity" android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.example.Activity.OriginalData_Activity"
+            android:screenOrientation="portrait"/>
         <!-- 文件列表显示 -->
-        <activity android:name="com.example.Activity.ImportDataFromFile_Activity" android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.example.Activity.ImportDataFromFile_Activity"
+            android:screenOrientation="portrait"/>
     </application>
 
     <!-- 采集音频信号权限 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 	<!-- 读写SD卡权限 -->
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>

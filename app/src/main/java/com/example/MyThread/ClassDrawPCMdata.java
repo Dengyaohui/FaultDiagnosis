@@ -169,6 +169,6 @@ public class ClassDrawPCMdata extends Thread{
 			}
 		}
 	}
-	
+
 	
 }

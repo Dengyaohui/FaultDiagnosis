@@ -12,23 +12,7 @@
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout-v21\\notification_action.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout-v21\\notification_template_icon_group.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout-v21\\notification_action.xml"
-    },
-    {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout-v21\\notification_template_custom_big.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout-v21\\notification_action_tombstone.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout-v21\\notification_template_custom_big.xml"
     }
 ]

@@ -1,15 +1,11 @@
 [
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_part_chronometer.xml"
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cur_data_activity.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\cur_data_activity.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_list_menu_item_icon.xml"
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
@@ -28,8 +24,20 @@
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_action.xml"
+    },
+    {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dimensionless_data_activity.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\dimensionless_data_activity.xml"
+    },
+    {
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_show_update_time_dialog.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\set_show_update_time_dialog.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
@@ -40,212 +48,20 @@
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_search_view.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\import_originaldata_listitem.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\import_originaldata_listitem.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_select_dialog_material.xml"
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_part_time.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_show_history_filelist.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\activity_show_history_filelist.xml"
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_report_update_time_dialog.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\set_report_update_time_dialog.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_media_custom.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_activity_chooser_view.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_popup_menu_header_item_layout.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\select_dialog_multichoice_material.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\date_time_dialog.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\date_time_dialog.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_part_time.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_icon_group.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\select_dialog_item_material.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_action_menu_layout.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_screen_toolbar.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_action_tombstone.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\import_originaldata_listitem.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\import_originaldata_listitem.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_list_menu_item_radio.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_alert_dialog_title_material.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_alert_dialog_title_material.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\import_data_activity.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\import_data_activity.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_list_menu_item_icon.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_show_history_filelist.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\activity_show_history_filelist.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_screen_content_include.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_lines_media.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_popup_menu_item_layout.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_action_bar_title_item.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\report_menu.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\report_menu.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_media.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dimensionless_history_activity.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\dimensionless_history_activity.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\select_dialog_item_material.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_action_mode_bar.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_report_interval_dialog.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\set_report_interval_dialog.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_alert_dialog_material.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_report_warning_line_dialog.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\set_report_warning_line_dialog.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_media.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_screen_simple.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_action_menu_item_layout.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_action.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_icon_group.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_report_update_time_dialog.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\set_report_update_time_dialog.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_show_update_time_dialog.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\set_show_update_time_dialog.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_screen_toolbar.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
@@ -268,24 +84,24 @@
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_show_history_filelist_item.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\activity_show_history_filelist_item.xml"
-    },
-    {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\date_time_dialog.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\date_time_dialog.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_dialog_title_material.xml"
-    },
-    {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\select_dialog_item_material.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
@@ -296,12 +112,12 @@
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\date_time_dialog.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\date_time_dialog.xml"
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_alert_dialog_material.xml"
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\import_originaldata_listitem.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\import_originaldata_listitem.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
@@ -312,20 +128,8 @@
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dimensionless_data_activity.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\dimensionless_data_activity.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
@@ -340,14 +144,6 @@
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_action_tombstone.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_action_bar_up_container.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
@@ -356,20 +152,16 @@
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_show_history_filelist.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\activity_show_history_filelist.xml"
+    },
+    {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_popup_menu_item_layout.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_show_update_time_dialog.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\set_show_update_time_dialog.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_custom_big.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_custom_big.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_report_warning_line_dialog.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\set_report_warning_line_dialog.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
@@ -384,32 +176,24 @@
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_action_bar_title_item.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\select_dialog_singlechoice_material.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dimensionless_history_activity.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\dimensionless_history_activity.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_expanded_menu_layout.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_action.xml"
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_custom_big.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\notification_template_custom_big.xml"
     },
     {
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_report_interval_dialog.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\set_report_interval_dialog.xml"
+    },
+    {
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dimensionless_history_activity.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\dimensionless_history_activity.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
@@ -420,20 +204,16 @@
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\report_menu_list.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\src\\main\\res\\layout\\report_menu_list.xml"
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\set_report_warning_line_dialog.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\set_report_warning_line_dialog.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\report_menu_list.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\src\\main\\res\\layout\\report_menu_list.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_list_menu_item_checkbox.xml"
-    },
-    {
-        "merged": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "H:\\AS Workspace\\Fault_V2.02\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",

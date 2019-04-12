@@ -53,7 +53,7 @@ public class ClassDealPCMdata{
 	
 	/**
 	 * return 无量纲指标参数的值（平均值）
-	 * @param yData
+	 * param yData
 	 * @param arithmeticType     使用的算法种类：0>计算烈度  1>计算脉冲  2>计算欲度  3>计算峰值  4>计算峭度 5>计算波形
 	 * @return
 	 */

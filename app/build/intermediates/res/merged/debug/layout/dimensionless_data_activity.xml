@@ -11,7 +11,7 @@
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
          android:orientation="vertical"
-  	     android:background="#d88A2BE2"
+  	     android:background="#D24D57"
          >
          <!-- 用户头像姓名等等信息 -->
 		 <RelativeLayout 
@@ -195,7 +195,7 @@
     	    >
     	    <ImageButton
     	        android:id="@+id/search_Imagebutton"
-	    	    android:layout_width="wrap_content"
+	    	    android:layout_width="50dp"
 	    	    android:layout_height="fill_parent"
 	    	    android:background="#33A1C9"
 	    	    android:src="@drawable/search"

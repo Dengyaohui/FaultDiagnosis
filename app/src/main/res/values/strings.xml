@@ -27,5 +27,7 @@
 	<string name="Set_report_item1">诊断间隔</string>
 	<string name="Set_report_item2">更新时间</string>
 	<string name="Set_report_item3">警告线</string>
+	<string name="cancel">取消</string>
+	<string name="setting">设置</string>
 
 </resources>

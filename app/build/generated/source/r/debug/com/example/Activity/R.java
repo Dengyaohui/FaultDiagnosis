@@ -2118,7 +2118,6 @@ containing a value of this type.
         public static final int line3=0x7f0a00b2;
         public static final int listMode=0x7f0a0011;
         public static final int list_item=0x7f0a0036;
-        public static final int loginButton=0x7f0a0071;
         public static final int maichong_data_textview=0x7f0a00ba;
         public static final int maichong_high_line=0x7f0a00d9;
         public static final int maichong_low_line=0x7f0a00da;
@@ -2210,7 +2209,7 @@ containing a value of this type.
         public static final int start=0x7f0a0028;
         public static final int startButton=0x7f0a006f;
         public static final int status_bar_latest_event_content=0x7f0a00a3;
-        public static final int stopButton=0x7f0a0070;
+        public static final int stopButton=0x7f0a0071;
         public static final int submenuarrow=0x7f0a004c;
         public static final int submit_area=0x7f0a005d;
         public static final int surfaceView=0x7f0a006e;
@@ -2241,6 +2240,7 @@ containing a value of this type.
         public static final int topPanel=0x7f0a0044;
         public static final int up=0x7f0a0010;
         public static final int useLogo=0x7f0a001a;
+        public static final int webButton=0x7f0a0070;
         public static final int withText=0x7f0a002e;
         public static final int wrap_content=0x7f0a0021;
         public static final int yudu_data_textview=0x7f0a00bd;
@@ -2367,14 +2367,16 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f050012;
         public static final int action_settings=0x7f05002d;
         public static final int app_name=0x7f05002e;
-        public static final int close=0x7f05002f;
-        public static final int hello_world=0x7f050030;
-        public static final int md__drawerClosedIndicatorDesc=0x7f050031;
-        public static final int md__drawerOpenIndicatorDesc=0x7f050032;
-        public static final int pause=0x7f050033;
-        public static final int report=0x7f050034;
+        public static final int cancel=0x7f05002f;
+        public static final int close=0x7f050030;
+        public static final int hello_world=0x7f050031;
+        public static final int md__drawerClosedIndicatorDesc=0x7f050032;
+        public static final int md__drawerOpenIndicatorDesc=0x7f050033;
+        public static final int pause=0x7f050034;
+        public static final int report=0x7f050035;
         public static final int search_menu_title=0x7f050013;
-        public static final int set=0x7f050035;
+        public static final int set=0x7f050036;
+        public static final int setting=0x7f050037;
         public static final int status_bar_notification_info_overflow=0x7f050014;
     }
     public static final class style {
@@ -2384,15 +2386,8 @@ containing a value of this type.
         public static final int Animation_AppCompat_DropDownUp=0x7f0700a5;
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
          */
         public static final int AppBaseTheme=0x7f07000b;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static final int AppTheme=0x7f0700a6;
         public static final int Base_AlertDialog_AppCompat=0x7f0700a7;
         public static final int Base_AlertDialog_AppCompat_Light=0x7f0700a8;

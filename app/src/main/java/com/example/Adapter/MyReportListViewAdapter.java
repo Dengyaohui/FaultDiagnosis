@@ -1,10 +1,5 @@
 package com.example.Adapter;
 
-import java.util.List;
-
-import com.example.Activity.R;
-import com.example.MyPacketClass.DimensionlessReport;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +7,16 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.Activity.R;
+import com.example.MyPacketClass.DimensionlessReport;
+
+import java.util.List;
+
+/**
+ * 控制诊断报告的列表
+* */
+
 
 public class MyReportListViewAdapter extends BaseAdapter{
 
@@ -77,6 +82,7 @@ public class MyReportListViewAdapter extends BaseAdapter{
 		}else {
 			holder = (reportViewHolder)converView.getTag();
 		}
+
 		
 		//设置值
 		report = reports.get(position);
@@ -127,7 +133,7 @@ public class MyReportListViewAdapter extends BaseAdapter{
 		}else {
 			holder.boxing_state_logo.setImageResource(R.drawable.state_warning_logo);
 		}
-		
+
 		return converView;
 	}
 

@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0000-00-00 00：00：00"
-            android:textColor="#A020F0"
+            android:textColor="#D24D57"
             />
         <ImageView 
             android:layout_width="0dp"
@@ -25,7 +25,8 @@
             />
     </LinearLayout>
     
-    <LinearLayout 
+    <LinearLayout
+        android:layout_marginLeft="8dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -68,7 +69,8 @@
         </LinearLayout>
     </LinearLayout>
     
-    <LinearLayout 
+    <LinearLayout
+        android:layout_marginLeft="8dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -111,7 +113,8 @@
         </LinearLayout>
     </LinearLayout>
     
-    <LinearLayout 
+    <LinearLayout
+        android:layout_marginLeft="8dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -154,7 +157,8 @@
         </LinearLayout>
     </LinearLayout>
     
-    <LinearLayout 
+    <LinearLayout
+        android:layout_marginLeft="8dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -197,7 +201,8 @@
         </LinearLayout>
     </LinearLayout>
     
-    <LinearLayout 
+    <LinearLayout
+        android:layout_marginLeft="8dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -240,7 +245,8 @@
         </LinearLayout>
     </LinearLayout>
     
-    <LinearLayout 
+    <LinearLayout
+        android:layout_marginLeft="8dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

@@ -1,6 +1,8 @@
 package com.example.MyThread;
 
+import android.annotation.SuppressLint;
 import android.os.Environment;
+import android.util.Log;
 
 import com.example.Activity.GlobleVariable;
 import com.example.FileUtils.ClassDealPCMdata;
@@ -14,6 +16,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Arrays;
 
 /**
  * 计算并保存无量纲指标线程
@@ -84,8 +87,7 @@ public class ClassSaveDimensionless_Parameter_Data extends Thread{
 		}else {
 			System.out.println("未到5分钟文件上限，不用删除");
 		}
-		
-		
+
 		return 0;
 	}
 	
@@ -134,12 +136,14 @@ public class ClassSaveDimensionless_Parameter_Data extends Thread{
 		}
 	}
 	
+	@SuppressLint("LongLogTag")
 	@Override
 	public void run() {
 		try {
 				for (int i = 0; i < 6; i++) {
 					ClassDealPCMdata dealPCMdata = new ClassDealPCMdata(tmpBuf, i);
 					DimensionlessData[i] = dealPCMdata.getDimensionless();
+					Log.e("DimensionlessData: >>>>>>>>>>>", Arrays.toString(DimensionlessData));
 //					System.out.println("DimensionlessData: >>>>>>>>>>>"+DimensionlessData[i]);
 				}
 				//这里保存的一条数据包含无量纲指标6种值

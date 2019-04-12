@@ -5,10 +5,10 @@
     android:orientation="vertical"
     android:background="#25282e" 
     >
-    <LinearLayout 
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="1.5"
         android:orientation="horizontal"
         android:layout_margin="5dp"
         >
@@ -30,19 +30,19 @@
                 android:gravity="center"
                 android:text="采样点"
                 android:textColor="#FAFFF0"
-                android:textSize="18sp"
-                android:background="#8A2BE2"
+                android:textSize="13sp"
+                android:background="#EB7347"
                 />
           	  <TextView 
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="30dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:text="原始数据"
                 android:textColor="#FAFFF0"
-                android:textSize="20sp"
-                android:background="#8A2BE2"
+                android:textSize="13sp"
+                android:background="#EB7347"
                 />
         	</LinearLayout>    
             <ListView 
@@ -52,8 +52,8 @@
                 android:listSelector="@null"
         		android:divider="#808069"
         		android:dividerHeight="0.3dp"
-                android:background="#A020F0"
-                ></ListView>
+                android:background="#ffff"
+                />
         </LinearLayout>
         <!-- 原始波形 -->
         <LinearLayout 
@@ -67,7 +67,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#A020F0"
+                android:textColor="#D0D0D0"
                 android:textSize="18sp"
                 android:background="#25282e"
                 />
@@ -83,7 +83,7 @@
     <!-- 三个操作按钮 -->
     <LinearLayout 
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         >
         <!-- 显示波形 -->
@@ -106,6 +106,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Show Wave"
+                android:textColor="#ffff"
                 />
         </LinearLayout>
         <!-- 上一个数据 -->
@@ -128,6 +129,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Last Data"
+                android:textColor="#ffff"
+
                 />
         </LinearLayout>
         <!-- 下一个数据 -->
@@ -150,6 +153,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Next Data"
+                android:textColor="#ffff"
                 />
         </LinearLayout>
     </LinearLayout>
@@ -160,8 +164,8 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5" 
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="vertical"
         android:background="#25282e"
         >
@@ -169,10 +173,9 @@
     <!-- 无量纲指标 -->
     <LinearLayout 
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#A020F0"
+        android:background="#2C3E50"
         >
         <!-- 烈度 -->
         <LinearLayout 
@@ -187,9 +190,9 @@
                 android:gravity="center"
                 android:text="烈度"
                 android:textSize="18sp"
-                android:background="#8A2BE2"
+                android:background="#D0D0D0"
                 />
-            <TextView 
+            <TextView
                 android:id="@+id/bottomData1"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
@@ -212,7 +215,7 @@
                 android:gravity="center"
                 android:text="脉冲"
                 android:textSize="18sp"
-                android:background="#8A2BE2"
+                android:background="#D0D0D0"
                 />
             <TextView 
                 android:id="@+id/bottomData2"
@@ -237,7 +240,7 @@
                 android:gravity="center"
                 android:text="欲度"
                 android:textSize="18sp"
-                android:background="#8A2BE2"
+                android:background="#D0D0D0"
                 />
             <TextView 
                 android:id="@+id/bottomData3"
@@ -262,7 +265,7 @@
                 android:gravity="center"
                 android:text="峰值"
                 android:textSize="18sp"
-                android:background="#8A2BE2"
+                android:background="#D0D0D0"
                 />
             <TextView 
                 android:id="@+id/bottomData4"
@@ -287,7 +290,7 @@
                 android:gravity="center"
                 android:text="峭度"
                 android:textSize="18sp"
-                android:background="#8A2BE2"
+                android:background="#D0D0D0"
                 />
             <TextView 
                 android:id="@+id/bottomData5"
@@ -312,7 +315,7 @@
                 android:gravity="center"
                 android:text="波形"
                 android:textSize="18sp"
-                android:background="#8A2BE2"
+                android:background="#D0D0D0"
                 />
             <TextView 
                 android:id="@+id/bottomData6"

@@ -18,10 +18,10 @@
         android:id="@+id/file_Path"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="文件路径"
+        android:text="文件路径:"
         android:textColor="#FAFFF0"
         android:textSize="20sp"
-        android:background="#A020F0"
+        android:background="#2C3E50"
         />
 	<View 
 	    android:id="@+id/file_Path_Line"
@@ -32,11 +32,12 @@
     <TextView 
         android:id="@+id/file_Return"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:text="返回上一级"
+		android:gravity="center"
         android:textColor="#FAFFF0"
         android:textSize="25sp"
-        android:background="#8A2BE2"
+        android:background="#EB7347"
         />
     <ListView 
         android:id="@+id/file_List"

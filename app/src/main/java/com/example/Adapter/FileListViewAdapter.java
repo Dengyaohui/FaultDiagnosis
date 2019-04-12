@@ -1,11 +1,5 @@
 package com.example.Adapter;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import com.example.Activity.R;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +7,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.Activity.R;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class FileListViewAdapter extends BaseAdapter{
 
@@ -69,9 +69,10 @@ public class FileListViewAdapter extends BaseAdapter{
 	
 	//传进信息列表
 	public void setFileListInfo(List<Map<String, Object>> infos){
-		list.clear();
+//		list.clear();
 		list.addAll(infos);
 		notifyDataSetChanged();
+
 	} 
 
 }

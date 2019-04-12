@@ -19,7 +19,7 @@
         <TextView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="开始时间"
+            android:text="开始时间:"
             />
         <EditText 
             android:id="@+id/edit_start_time"
@@ -29,7 +29,7 @@
         <TextView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="结束时间"
+            android:text="结束时间:"
             />
         <EditText 
             android:id="@+id/edit_end_time"
@@ -45,7 +45,7 @@
     	    >
     	    <ImageButton
     	        android:id="@+id/search_Imagebutton"
-	    	    android:layout_width="wrap_content"
+	    	    android:layout_width="50dp"
 	    	    android:layout_height="fill_parent"
 	    	    android:background="#33A1C9"
 	    	    android:src="@drawable/search"

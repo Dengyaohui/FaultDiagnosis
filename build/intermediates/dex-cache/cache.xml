@@ -48,6 +48,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="D:\Cache\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.12.0\3742beff8024d0a0073d284b7c5e4cbf73d99b25\okio-1.12.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="3742beff8024d0a0073d284b7c5e4cbf73d99b25">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\okio-1.12.0_a6e68c6dc848599396aedcf1297704c1993365ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\exploded-aar\com.android.support\support-v4\26.0.0-alpha1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -63,6 +72,15 @@
         revision="27.0.2"
         sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
         <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-26.0.0-alpha1_a12622d090251b7a5214ba056dbd18be631d27a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Cache\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.7.0\6edbebdd8868708db718d15c09c4b28037fd487e\okhttp-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.2"
+        sha1="6edbebdd8868708db718d15c09c4b28037fd487e">
+        <dex dex="H:\AS Workspace\FaultDiagnosis\app\build\intermediates\pre-dexed\debug\okhttp-3.7.0_fcf5941304a41ea93eb67fa53a4600221e2ab06a.jar" />
     </item>
     <item
         is-multidex="false"

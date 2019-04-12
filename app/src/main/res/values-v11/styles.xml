@@ -12,14 +12,14 @@
     <!-- 自定义左侧操作栏风格 -->
     <style name="main_Left_tab_button">
         <item name="android:textSize">13.0sp</item>  
-        <item name="android:textColor">#ffffff</item>  
+        <item name="android:textColor">#030303</item>
         <item name="android:ellipsize">marquee</item>  
-        <item name="android:gravity">center_horizontal</item>   
-        <item name="android:paddingTop">140dip</item>  
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">40dip</item>
         <item name="android:paddingBottom">0dip</item>  
         <item name="android:layout_width">fill_parent</item>  
         <item name="android:layout_height">wrap_content</item>  
-        <item name="android:layout_marginBottom">0dip</item>  
+        <item name="android:layout_marginBottom">0dip</item>
         <item name="android:button">@null</item>  
         <item name="android:singleLine">true</item>  
         <item name="android:drawablePadding">10.0dip</item>  
