@@ -52,7 +52,7 @@ public class ClassReadPCMdata_From_Mic extends Thread{
 			//开始录制
 			audioRecord.startRecording();
 			while(ClassShowCurData.isRecording){
-				int bufferReadResult = audioRecord.read(buffer, 0, recBufSize); //读取1024个,返回512
+				int bufferReadResult = audioRecord.read(buffer, 0, recBufSize); //读取1024个,返回512,bufferReadResult = 640
 				//将原来的数据缩小到rateX分之一
 				tmpBuf = new short[bufferReadResult/rateX];
 				old_tmpBufLength = bufferReadResult/rateX;

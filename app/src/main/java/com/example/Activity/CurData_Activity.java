@@ -821,7 +821,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 			updateCurDataInChartViewFromWeb_timerTask.cancel();
 		}
 		updateCurDataInChartViewFromWeb_timerTask = new UpdateCurDataInChartViewFromWeb_TimerTask();
-		timer.schedule(updateCurDataInChartViewFromWeb_timerTask, 1000, GlobleVariable.UPDATE_CUR_DATA_PER_TIME);
+		timer.schedule(updateCurDataInChartViewFromWeb_timerTask, 15000, GlobleVariable.UPDATE_CUR_DATA_PER_TIME);
 
 		//定时更新诊断报告中的数据
 		if (update_reportWebData!=null) {
@@ -852,10 +852,10 @@ public class CurData_Activity extends Activity implements OnClickListener{
 			case R.id.webButton:
 				classShowCurData.baseLine = sfv.getHeight()/2;
 				//显示左上角麦克风绿色波形以及更新波形和无量纲指标
-				classShowCurData.Start(audioRecord, recBufSize, sfv, mPaint);
+				classShowCurData.StartForWeb(recBufSize, sfv, mPaint);
 
-//				start_web_TimerTask();
 				WebDataReceive.ReceiveDataFromWeb();
+				start_web_TimerTask();
 
 				sceneButton.setEnabled(false);
 				sceneButton.setTextColor(Color.WHITE);
