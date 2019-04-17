@@ -45,8 +45,7 @@ public class ClassSavePCMdata extends Thread{
 	
 	
 	/**
-	 * 
-	 * @param tmpBuf        保存的数据
+	 *  @param tmpBuf        保存的数据
 	 * @param saveDirName   保存到哪个文件夹
 	 * @param saveFileName  以什么文件名保存
 	 * @param fileSaveMax   保存的最大数量

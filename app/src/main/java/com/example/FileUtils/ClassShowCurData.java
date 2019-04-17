@@ -26,7 +26,7 @@ public class ClassShowCurData {
 	/**
 	 * 将每帧数据添加到该列表中
 	 */
-	public static ArrayList<short[]> inBuf = new ArrayList<short[]>();
+	public static ArrayList<short[]> inBuf = new ArrayList<>();
 	/**
 	 * 线程控制标记
 	 */

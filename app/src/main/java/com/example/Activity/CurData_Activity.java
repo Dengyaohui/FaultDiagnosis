@@ -38,6 +38,7 @@ import com.example.MyUtilClass.Show_first_item_pressed.RestartTimerTask_CallBack
 import com.example.MyUtilClass.Show_second_item_pressed;
 import com.example.MyUtilClass.Show_third_item_pressed;
 import com.example.MyUtilClass.Util;
+import com.example.Web.WebDataReceive;
 import com.touchmenotapps.widget.radialmenu.menu.v1.RadialMenuItem;
 import com.touchmenotapps.widget.radialmenu.menu.v1.RadialMenuWidget;
 
@@ -851,9 +852,10 @@ public class CurData_Activity extends Activity implements OnClickListener{
 			case R.id.webButton:
 				classShowCurData.baseLine = sfv.getHeight()/2;
 				//显示左上角麦克风绿色波形以及更新波形和无量纲指标
-				classShowCurData.StartForWeb(recBufSize, sfv, mPaint);
+				classShowCurData.Start(audioRecord, recBufSize, sfv, mPaint);
 
-//			start_web_TimerTask();
+//				start_web_TimerTask();
+				WebDataReceive.ReceiveDataFromWeb();
 
 				sceneButton.setEnabled(false);
 				sceneButton.setTextColor(Color.WHITE);
