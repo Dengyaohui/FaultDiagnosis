@@ -850,11 +850,12 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		// TODO Auto-generated method stub
 		switch (view.getId()) {
 			case R.id.webButton:
+				GlobleVariable.ReadFromWeb = true;
 				classShowCurData.baseLine = sfv.getHeight()/2;
-				//显示左上角麦克风绿色波形以及更新波形和无量纲指标
-				classShowCurData.StartForWeb(recBufSize, sfv, mPaint);
 
 				WebDataReceive.ReceiveDataFromWeb();
+				//显示左上角麦克风绿色波形以及更新波形和无量纲指标
+				classShowCurData.StartForWeb(audioRecord, recBufSize, sfv, mPaint);
 				start_web_TimerTask();
 
 				sceneButton.setEnabled(false);
@@ -866,6 +867,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 				collctionTips.setText("采集中...");
 				break;
 			case R.id.startButton:
+				GlobleVariable.ReadFromWeb = false;
 				classShowCurData.baseLine = sfv.getHeight()/2;
 				//显示左上角麦克风绿色波形以及更新波形和无量纲指标
 				classShowCurData.Start(audioRecord, recBufSize, sfv, mPaint);

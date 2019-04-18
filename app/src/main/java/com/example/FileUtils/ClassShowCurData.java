@@ -74,13 +74,13 @@ public class ClassShowCurData {
 	/**
 	 * 开始从后台拉取数据
 	 */
-	public void StartForWeb(int recBufSize, SurfaceView sfv, Paint mPaint){
+	public void StartForWeb(AudioRecord audioRecord, int recBufSize, SurfaceView sfv, Paint mPaint){
 		isRecording = true;
 
 		if(timerTask!=null)
 			timerTask.cancel();
 
-		new ClassReadPCMdata_From_Web(recBufSize).start();//读数据并且每隔1秒保存一次（原始数据）
+		new ClassReadPCMdata_From_Web(audioRecord, recBufSize).start();//读数据并且每隔1秒保存一次（原始数据）
 		new ClassDrawPCMdata(sfv, mPaint, rateY, baseLine).start();    //绘制实时数据图(surfaceview上显示)
 		//绘制实时数据波形图(chartview上显示)
 	}

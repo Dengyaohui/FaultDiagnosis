@@ -137,19 +137,19 @@ public class ClassDrawPCMdata extends Thread{
 		//没有传进历史数据，即现在是实时采集显示
 		if(historyBuf==null){
 			while(ClassShowCurData.isRecording){
-				ArrayList<short[]> buf = new ArrayList<short[]>();
+				ArrayList<short[]> buf;
 				synchronized (ClassShowCurData.inBuf) {
 					//输入数据缓存区无数据就跳过下面语句再一次循环
 					if(ClassShowCurData.inBuf.size()==0)
 						continue;
 					//将当前缓存中的数据复制一份并返回给buf
-					buf = (ArrayList<short[]>)ClassShowCurData.inBuf.clone();
+					buf = (ArrayList<short[]>) ClassShowCurData.inBuf.clone();
 					//连续画3组数据后就清空缓存区
 					if(ClassShowCurData.inBuf.size() >3)
 						ClassShowCurData.inBuf.clear();
 				}
 				for (int i = 0; i < buf.size(); i++) {
-					short[] tmpBuf = buf.get(i);
+					short[] tmpBuf =  buf.get(i);
 					//将当前缓存数据绘制出来
 					if(tmpBuf.length>0)
 						SimpleDrawCur(sfv, X_index, Y_index, tmpBuf, rateY, baseLine);
