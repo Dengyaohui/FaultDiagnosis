@@ -140,7 +140,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 	/**
 	 * 用于保存当前数据
 	 */
-	private short[] curData;
+	private float[] curData;
 	/**
 	 * 用于保存当前无量纲指标数据
 	 */
@@ -390,7 +390,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 	 * 读取最新一秒数据的文件并获取原始数据保存到curData数组中
 	 * param fileName
 	 */
-	private short[] getNewestSecondData(String Filename){
+	private float[] getNewestSecondData(String Filename){
 		File historyFile = null;
 		try {
 			historyFile = new File(getNewestFile(GlobleVariable.SD_CARD_PATH+"/"+GlobleVariable.DATA_SAVE_DIR+"/"+Filename));
@@ -400,7 +400,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		}
 		//写进文件的数据是16位的，因为有正负，所以创建历史记录缓存区时长度为一半
 		int length = (int)(historyFile.length()/2);
-		short[] curData = new short[length];
+		float[] curData = new float[length];
 
 		DataInputStream dataInputStream = null;
 		try {
@@ -410,7 +410,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 
 			int i = 0;
 			while(dataInputStream.available()>0){
-				curData[i] = dataInputStream.readShort();
+				curData[i] = dataInputStream.readFloat();
 				i++;
 			}
 		} catch (Exception e) {
@@ -623,8 +623,8 @@ public class CurData_Activity extends Activity implements OnClickListener{
 	/**
 	 * 自适应坐标轴
 	 */
-	private void fit(short[] data, XYMultipleSeriesRenderer mSeriiesXYRenderer){
-		int max=0;
+	private void fit(float[] data, XYMultipleSeriesRenderer mSeriiesXYRenderer){
+		float max=0;
 		for (int i = 0; i < data.length; i++) {
 			if(Math.abs(data[i])>max)
 				max = data[i];
@@ -634,7 +634,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		mSeriiesXYRenderer.setYAxisMax(Math.ceil(max/10)*20);
 		mSeriiesXYRenderer.setYLabels(30);
 		//x轴
-		mSeriiesXYRenderer.setXAxisMax(data.length);
+		mSeriiesXYRenderer.setXAxisMax(data.length/2);//X轴总长度
 		mSeriiesXYRenderer.setXLabels(data.length/10);
 		//根据当前情况对渲染器做一点修改
 		mSeriiesXYRenderer.setPanLimits(new double[]{0,data.length+data.length/10,-(max*2),max*2});
@@ -883,6 +883,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 				collctionTips.setText("采集中...");
 				break;
 			case R.id.stopButton:
+				GlobleVariable.ReadFromWeb = false;
 				classShowCurData.Stop();
 
 				stop_all_TimerTask();
