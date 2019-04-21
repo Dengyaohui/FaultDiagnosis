@@ -13,6 +13,7 @@ import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.SurfaceView;
 import android.view.View;
@@ -61,6 +62,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import static com.example.MyThread.ClassReadPCMdata_From_Web.DimensionlessDataFromWeb;
 
 /**
  * 实时采集数据界面
@@ -372,7 +375,9 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		public void run() {
 			// TODO Auto-generated method stub
 			curData = getNewestSecondData(GlobleVariable.WEB_CUR_ORIGINAL_DATA_PER_1S);
-			curDimensionlissData = getNewestSecondDimensionlessData(GlobleVariable.WEB_CUR_DIMENSION_LESS_PER_1S);
+			Log.e("curData", String.valueOf(curData));
+			curDimensionlissData = DimensionlessDataFromWeb;
+			Log.e("curDimensionlissData", String.valueOf(curDimensionlissData));
 			if (curData!=null && curDimensionlissData!=null) {
 				updateChartViewHandler.sendEmptyMessage(0);
 			}
@@ -634,7 +639,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		mSeriiesXYRenderer.setYAxisMax(Math.ceil(max/10)*20);
 		mSeriiesXYRenderer.setYLabels(30);
 		//x轴
-		mSeriiesXYRenderer.setXAxisMax(data.length/2);//X轴总长度
+		mSeriiesXYRenderer.setXAxisMax(data.length/2);//X轴拉伸
 		mSeriiesXYRenderer.setXLabels(data.length/10);
 		//根据当前情况对渲染器做一点修改
 		mSeriiesXYRenderer.setPanLimits(new double[]{0,data.length+data.length/10,-(max*2),max*2});
@@ -853,7 +858,8 @@ public class CurData_Activity extends Activity implements OnClickListener{
 				GlobleVariable.ReadFromWeb = true;
 				classShowCurData.baseLine = sfv.getHeight()/2;
 
-				WebDataReceive.ReceiveDataFromWeb();
+				if(GlobleVariable.ReadFromWeb){WebDataReceive.ReceiveDataFromWeb();}
+
 				//显示左上角麦克风绿色波形以及更新波形和无量纲指标
 				classShowCurData.StartForWeb(audioRecord, recBufSize, sfv, mPaint);
 				start_web_TimerTask();
@@ -883,7 +889,6 @@ public class CurData_Activity extends Activity implements OnClickListener{
 				collctionTips.setText("采集中...");
 				break;
 			case R.id.stopButton:
-				GlobleVariable.ReadFromWeb = false;
 				classShowCurData.Stop();
 
 				stop_all_TimerTask();
