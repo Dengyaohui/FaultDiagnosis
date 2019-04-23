@@ -374,10 +374,9 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
-			curData = getNewestSecondData(GlobleVariable.WEB_CUR_ORIGINAL_DATA_PER_1S);
-			Log.e("curData", String.valueOf(curData));
-			curDimensionlissData = DimensionlessDataFromWeb;
-			Log.e("curDimensionlissData", String.valueOf(curDimensionlissData));
+			curData = getNewestSecondData(GlobleVariable.WEB_CUR_DIMENSION_LESS_PER_1S);
+			curDimensionlissData = getNewestSecondDimensionlessData(GlobleVariable.WEB_CUR_DIMENSION_LESS_PER_1S);
+//			curDimensionlissData = DimensionlessDataFromWeb;
 			if (curData!=null && curDimensionlissData!=null) {
 				updateChartViewHandler.sendEmptyMessage(0);
 			}
@@ -403,6 +402,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 			System.out.println("每秒原始数据文件夹中还没有数据文件");
 			return null;
 		}
+
 		//写进文件的数据是16位的，因为有正负，所以创建历史记录缓存区时长度为一半
 		int length = (int)(historyFile.length()/2);
 		float[] curData = new float[length];
@@ -416,10 +416,16 @@ public class CurData_Activity extends Activity implements OnClickListener{
 			int i = 0;
 			while(dataInputStream.available()>0){
 				curData[i] = dataInputStream.readFloat();
+//				System.out.print("curData>>>>>>>>>>>>>>>>>>" + curData[i]);
 				i++;
 			}
+			while (i != curData.length){
+				curData[i] = 0;
+				i++;
+			}
+
 		} catch (Exception e) {
-			System.out.println("获取最新一秒原始数据失败----->"+e.toString());
+			Log.e("获取最新一秒原始数据失败----->",e.toString());
 		}finally{
 			try {
 				dataInputStream.close();
@@ -432,12 +438,15 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		//显示当前数据对应的时间点
 		String stringName = historyFile.getName();
 		stringName = stringName.substring(0,19);
-		char[] curDataTime = stringName.toCharArray();
-		curDataTime[10] = ' ';
-		curDataTime[13] = ':';
-		curDataTime[16] = ':';
-
-		curlabel = String.valueOf(curDataTime);
+//		if(GlobleVariable.ReadFromWeb){
+//			curlabel = stringName;
+//		}else {
+			char[] curDataTime = stringName.toCharArray();
+			curDataTime[10] = ' ';
+			curDataTime[13] = ':';
+			curDataTime[16] = ':';
+			curlabel = String.valueOf(curDataTime);
+//		}
 
 		return curData;
 	}
@@ -483,10 +492,10 @@ public class CurData_Activity extends Activity implements OnClickListener{
 				i++;
 			}
 			//加入诊断报告(需要根据间隔时间判断是否生成报告)
-			Add2ReportList(historyFile.getName(), curDimensionlessData);
+//			Add2ReportList(historyFile.getName(), curDimensionlessData);
 
 		} catch (Exception e) {
-			System.out.println("获取最新一秒无量纲指标数据失败----->"+e.toString());
+			Log.e("获取最新一秒无量纲指标数据失败----->",e.toString());
 		}finally{
 
 			try {
@@ -596,6 +605,9 @@ public class CurData_Activity extends Activity implements OnClickListener{
 	private void updateChartView(){
 		XYMultipleSeriesDataset dataset = timeChart.createDataset(curData, "实时采集数据波形");
 		XYMultipleSeriesRenderer renderer = timeChart.createRenderer();
+
+		//加入诊断报告(需要根据间隔时间判断是否生成报告)
+		Add2ReportList(curlabel, curDimensionlissData);
 
 		fit(curData, renderer);
 		mChartLayout.removeAllViews();
