@@ -1,7 +1,9 @@
 package com.example.MyChart;
 
-import java.io.File;
-import java.util.Date;
+import android.graphics.Color;
+import android.graphics.Paint.Align;
+
+import com.example.Activity.GlobleVariable;
 
 import org.achartengine.chart.PointStyle;
 import org.achartengine.model.TimeSeries;
@@ -10,10 +12,7 @@ import org.achartengine.model.XYSeries;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
 
-import com.example.Activity.GlobleVariable;
-
-import android.graphics.Color;
-import android.graphics.Paint.Align;
+import java.util.Date;
 
 public class TimeChart {
 
@@ -197,7 +196,7 @@ public class TimeChart {
 	 * @param seriesTitle 图表标签
 	 * @return
 	 */
-	public XYMultipleSeriesDataset createDataset(short[] data,String seriesTitle){
+	public XYMultipleSeriesDataset createDataset(float[] data, String seriesTitle){
 		XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
 		XYSeries xySeries = new XYSeries(seriesTitle);
 		//把最旧的点放在x轴前面

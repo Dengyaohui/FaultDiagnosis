@@ -26,7 +26,7 @@ public class ClassShowCurData {
 	/**
 	 * 将每帧数据添加到该列表中
 	 */
-	public static ArrayList<short[]> inBuf = new ArrayList<>();
+	public static ArrayList<Float[]> inBuf = new ArrayList<>();
 	/**
 	 * 线程控制标记
 	 */
@@ -103,30 +103,34 @@ public class ClassShowCurData {
 
 		@Override
 		public void run() {
-			//共用一个计数点，因为是一起算5分钟的
-			GlobleVariable.SecondCount++;
+			if (GlobleVariable.ReadFromWeb) {
 
-			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
-			Date curDate = new Date(System.currentTimeMillis());
-			String curTime = simpleDateFormat.format(curDate);
+			} else {
+				//共用一个计数点，因为是一起算5分钟的
+				GlobleVariable.SecondCount++;
 
-			//暂停中
-			System.out.println("机器暂停采集~~~");
-			//根据原来原始数据缓存区的大小新建一个数组并全用0填充
-			short[] newtmpBuf = new short[ClassReadPCMdata_From_Mic.old_tmpBufLength];
-			for (int i = 0; i < newtmpBuf.length; i++) {
-				newtmpBuf[i] = 0;
-			}
+				SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
+				Date curDate = new Date(System.currentTimeMillis());
+				String curTime = simpleDateFormat.format(curDate);
+
+				//暂停中
+				System.out.println("机器暂停采集~~~");
+				//根据原来原始数据缓存区的大小新建一个数组并全用0填充
+				Float[] newtmpBuf = new Float[ClassReadPCMdata_From_Mic.old_tmpBufLength];
+				for (int i = 0; i < newtmpBuf.length; i++) {
+					newtmpBuf[i] = Float.valueOf(0);
+				}
 
 //			new ClassSavePCMdata(newtmpBuf, "每秒原始数据", curTime+".pcm", GlobleVariable.PER_1S_HISTORY_FILE_MAX_NUM).start();
-			//计算并保存无量纲指标值
-			new ClassSaveDimensionless_Parameter_Data(newtmpBuf, "每秒无量纲指标", curTime+".txt", GlobleVariable.PER_1S_DIMENSION_LESS_FILE_MAX_NUM).start();
+				//计算并保存无量纲指标值
+				new ClassSaveDimensionless_Parameter_Data(newtmpBuf, "每秒无量纲指标", curTime + ".txt", GlobleVariable.PER_1S_DIMENSION_LESS_FILE_MAX_NUM).start();
 
-			//每5分钟保存到另一文件夹下
-			if(GlobleVariable.SecondCount==300){
+				//每5分钟保存到另一文件夹下
+				if (GlobleVariable.SecondCount == 300) {
 //				new ClassSavePCMdata(newtmpBuf, "每5分钟原始数据", curTime+".pcm", GlobleVariable.PER_5MIN_HISTORY_FILE_MAX_NUM).start();
-				new ClassSaveDimensionless_Parameter_Data(newtmpBuf, "每5分钟无量纲指标", curTime+".txt", GlobleVariable.PER_5MIN_DIMENSION_LESS_FILE_MAX_NUM).start();
-				GlobleVariable.SecondCount = 0;
+					new ClassSaveDimensionless_Parameter_Data(newtmpBuf, "每5分钟无量纲指标", curTime + ".txt", GlobleVariable.PER_5MIN_DIMENSION_LESS_FILE_MAX_NUM).start();
+					GlobleVariable.SecondCount = 0;
+				}
 			}
 		}
 

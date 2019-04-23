@@ -1,4 +1,0 @@
-#Thu Apr 18 20:40:32 CST 2019
-base.0=H\:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
-renamed.0=classes.dex
-file.0=H\:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

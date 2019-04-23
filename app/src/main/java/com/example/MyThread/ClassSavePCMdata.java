@@ -25,7 +25,7 @@ public class ClassSavePCMdata extends Thread{
 	/**
 	 * 从读数据类中传过来的一秒数据
 	 */
-	private short[] tmpBuf;
+	private Float[] tmpBuf;
 	/**
 	 * 保存到的文件夹名
 	 */
@@ -42,22 +42,22 @@ public class ClassSavePCMdata extends Thread{
 	 * 文件操作工具类
 	 */
 	private Class_FileTool fileTool;
-	
-	
+
+
 	/**
-	 *  @param tmpBuf        保存的数据
+	 * @param tmpBuf        保存的数据
 	 * @param saveDirName   保存到哪个文件夹
 	 * @param saveFileName  以什么文件名保存
 	 * @param fileSaveMax   保存的最大数量
 	 */
-	public ClassSavePCMdata(short[] tmpBuf, String saveDirName, String saveFileName, int fileSaveMax) {
+	public ClassSavePCMdata(Float[] tmpBuf, String saveDirName, String saveFileName, int fileSaveMax) {
 		this.tmpBuf = tmpBuf;
 		this.saveDirName = saveDirName;
 		this.saveFileName = saveFileName;
 		this.fileSaveMax = fileSaveMax;
 		fileTool = new Class_FileTool();
 	}
-	
+
 	/**
 	 * 根据最大保存数量来清理旧的文件
 	 * @return
@@ -67,7 +67,7 @@ public class ClassSavePCMdata extends Thread{
 		File curDir = new File(GlobleVariable.SD_CARD_PATH+"/"+GlobleVariable.DATA_SAVE_DIR+"/"+curDirName+"/");
 		//文件顺序不能保证
 		File[] curfiles = curDir.listFiles(new FilenameFilter() {
-			
+
 			@Override
 			public boolean accept(File dir, String fileName) {
 				// TODO Auto-generated method stub
@@ -91,11 +91,11 @@ public class ClassSavePCMdata extends Thread{
 		}else {
 			System.out.println("do not clean");
 		}
-		
-		
+
+
 		return 0;
 	}
-	
+
 	/**
 	 * 保存原始PCM数据
 	 * @param dirName
@@ -107,14 +107,14 @@ public class ClassSavePCMdata extends Thread{
 		//先判断是否有内存卡
 		if(Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)){
 			File PCMfile=null;
-			
+
 			fileTool.createDir_onSD(dirName);
 			try {
 				PCMfile = fileTool.createFile_onSD(dirName, fileName);
 			} catch (IOException e) {
 				System.out.println("Create file Error ------>"+e.toString());
 			}
-			
+
 			OutputStream outputStream = null;
 			try {
 				outputStream = new FileOutputStream(PCMfile);
@@ -123,32 +123,34 @@ public class ClassSavePCMdata extends Thread{
 			}
 			BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream);
 			DataOutputStream dataOutputStream = new DataOutputStream(bufferedOutputStream);
-			
+
 			try {
 				for (int i = 0; i < tmpBuf.length; i++) {
-					dataOutputStream.writeShort(tmpBuf[i]);
+					dataOutputStream.writeFloat(tmpBuf[i]);
+//					Log.e("有效值保存>>>>>>>>>", String.valueOf(tmpBuf[i]));		//正负几十到两百
+//					System.out.print("有效值个数>>>>>>>>>" + tmpBuf.length);	//640个有效值
 				}
 			} catch (Exception e) {
 				System.out.println("write pcm data to file error------->"+e.toString());
 			}finally{
 				dataOutputStream.close();
 			}
-			
+
 			//判断最大保存数量来清理当前文件夹下的文件（保存最新的n条记录）
 			cleanSomeOldFile(dirName);
 		}else {
 			//提示没有内存卡
 		}
 	}
-	
+
 	@Override
 	public void run() {
 		try {
-			 SavePCMdata(saveDirName, saveFileName);
+			SavePCMdata(saveDirName, saveFileName);
 		} catch (IOException e) {
 			System.out.println("SavePCMdata(saveDirName, saveFileName) error ------->"+e.toString());
 		}
 
 	}
-	
+
 }

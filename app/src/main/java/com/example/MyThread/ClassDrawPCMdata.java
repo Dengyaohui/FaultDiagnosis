@@ -36,7 +36,7 @@ public class ClassDrawPCMdata extends Thread{
 	/**
 	 * 上次绘制的y轴坐标
 	 */
-	private int oldY = 0;
+	private float oldY = 0;
 	/**
 	 * 画板
 	 */
@@ -49,10 +49,10 @@ public class ClassDrawPCMdata extends Thread{
 	 * 当前画图所在屏幕x轴的坐标
 	 */
 	private int X_index = 0;
-	private int Y_index = 0;
-	
+	private float Y_index = 0;
+
 	private short[] historyBuf=null;
-	
+
 	public ClassDrawPCMdata(SurfaceView sfv, Paint mPaint, int rateY, int baseLine){
 		this.sfv = sfv;
 		this.mPaint = mPaint;
@@ -68,16 +68,17 @@ public class ClassDrawPCMdata extends Thread{
 		this.historyBuf = historyBuf;
 		oldY = baseLine;
 	}
-	
+
 	/**
 	 * 绘制实时数据
 	 * @param sfv       画板
 	 * @param start     x轴开始的位置
+	 * @param Y_index
 	 * @param buffer    缓存区
 	 * @param rate      y轴数据缩小的比例
 	 * @param baseLine  y轴基线
 	 */
-	void SimpleDrawCur(SurfaceView sfv, int start, int Y_index, short[] buffer, int rate, int baseLine){
+	void SimpleDrawCur(SurfaceView sfv, int start, float Y_index, Float[] buffer, int rate, int baseLine){
 		if(start == 0)
 			oldX = 0;
 
@@ -85,8 +86,8 @@ public class ClassDrawPCMdata extends Thread{
 		Canvas canvas = sfv.getHolder().lockCanvas(new Rect(start, 0, start+buffer.length, sfv.getHeight()));
 		//清除背景(用什么颜色)
 		canvas.drawColor(Color.rgb(37, 40, 46));
-		
-		int y;
+
+		float y;
 		for (int i = 0; i < buffer.length; i++) {
 			int x = (i+start)*1;
 			//调节缩小比例，基准线
@@ -99,7 +100,7 @@ public class ClassDrawPCMdata extends Thread{
 		//解锁画布并提交画好的图像
 		sfv.getHolder().unlockCanvasAndPost(canvas);
 	}
-	
+
 	/**
 	 * 绘制历史数据
 	 * @param sfv
@@ -109,7 +110,7 @@ public class ClassDrawPCMdata extends Thread{
 	 * @param rate
 	 * @param baseLine
 	 */
-	void SimpleDrawHistory(SurfaceView sfv, int start, int Y_index, short[] buffer, int rate, int baseLine){
+	void SimpleDrawHistory(SurfaceView sfv, int start, float Y_index, short[] buffer, int rate, int baseLine){
 		if(start == 0)
 			oldX = 0;
 
@@ -117,7 +118,7 @@ public class ClassDrawPCMdata extends Thread{
 		Canvas canvas = sfv.getHolder().lockCanvas(new Rect(start, 0, sfv.getWidth(), sfv.getHeight()));
 		//清除背景
 		canvas.drawColor(Color.BLACK);
-		
+
 		int y;
 		for (int i = 1; i < buffer.length; i++) {
 			int x = (i+start)*3;//根据屏幕大小调节波形大小
@@ -137,19 +138,19 @@ public class ClassDrawPCMdata extends Thread{
 		//没有传进历史数据，即现在是实时采集显示
 		if(historyBuf==null){
 			while(ClassShowCurData.isRecording){
-				ArrayList<short[]> buf;
+				ArrayList<Float[]> buf;
 				synchronized (ClassShowCurData.inBuf) {
 					//输入数据缓存区无数据就跳过下面语句再一次循环
 					if(ClassShowCurData.inBuf.size()==0)
 						continue;
 					//将当前缓存中的数据复制一份并返回给buf
-					buf = (ArrayList<short[]>) ClassShowCurData.inBuf.clone();
+					buf = (ArrayList<Float[]>) ClassShowCurData.inBuf.clone();
 					//连续画3组数据后就清空缓存区
 					if(ClassShowCurData.inBuf.size() >3)
 						ClassShowCurData.inBuf.clear();
 				}
 				for (int i = 0; i < buf.size(); i++) {
-					short[] tmpBuf =  buf.get(i);
+					Float[] tmpBuf =  buf.get(i);
 					//将当前缓存数据绘制出来
 					if(tmpBuf.length>0)
 						SimpleDrawCur(sfv, X_index, Y_index, tmpBuf, rateY, baseLine);
@@ -170,5 +171,5 @@ public class ClassDrawPCMdata extends Thread{
 		}
 	}
 
-	
+
 }

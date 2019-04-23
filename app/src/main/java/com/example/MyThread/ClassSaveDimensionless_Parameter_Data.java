@@ -2,7 +2,6 @@ package com.example.MyThread;
 
 import android.annotation.SuppressLint;
 import android.os.Environment;
-import android.util.Log;
 
 import com.example.Activity.GlobleVariable;
 import com.example.FileUtils.ClassDealPCMdata;
@@ -16,7 +15,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.Arrays;
 
 /**
  * 计算并保存无量纲指标线程
@@ -28,7 +26,7 @@ public class ClassSaveDimensionless_Parameter_Data extends Thread{
 	/**
 	 * 从读数据类中传过来的一秒所采集的数据
 	 */
-	private short[] tmpBuf;
+	private Float[] tmpBuf;
 	/**
 	 * 保存到的文件夹名
 	 */
@@ -49,14 +47,14 @@ public class ClassSaveDimensionless_Parameter_Data extends Thread{
 	 * 文件操作工具类
 	 */
 	private Class_FileTool fileTool;
-	
+
 	/**
 	 * @param tmpBuf        保存的数据
 	 * @param saveDirName   保存到哪个文件夹
 	 * @param saveFileName  以什么文件名保存
 	 * @param fileSaveMax   保存的最大数量
 	 */
-	public ClassSaveDimensionless_Parameter_Data(short[] tmpBuf, String saveDirName, String saveFileName, int fileSaveMax){
+	public ClassSaveDimensionless_Parameter_Data(Float[] tmpBuf, String saveDirName, String saveFileName, int fileSaveMax){
 		this.tmpBuf = tmpBuf;
 		this.saveDirName = saveDirName;
 		this.saveFileName = saveFileName;
@@ -64,7 +62,7 @@ public class ClassSaveDimensionless_Parameter_Data extends Thread{
 		DimensionlessData = new float[6];
 		fileTool = new Class_FileTool();
 	}
-	
+
 	/**
 	 * 根据最大保存数量来清理旧的文件
 	 * @return
@@ -90,7 +88,7 @@ public class ClassSaveDimensionless_Parameter_Data extends Thread{
 
 		return 0;
 	}
-	
+
 	/**
 	 * 保存无量纲数据
 	 * @param dirName
@@ -102,54 +100,58 @@ public class ClassSaveDimensionless_Parameter_Data extends Thread{
 		//先判断是否有内存卡
 		if(Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)){
 			File Dimensionfile=null;
-			
+
 			fileTool.createDir_onSD(dirName);
 			try {
 				Dimensionfile = fileTool.createFile_onSD(dirName, fileName);
 			} catch (IOException e) {
 				System.out.println("Create file Error ------>"+e.toString());
 			}
-			
+
 			OutputStream outputStream = null;
 			try {
 				outputStream = new FileOutputStream(Dimensionfile);
 			} catch (FileNotFoundException e) {
-				System.out.println("new FileOutputStream(Dimensionfile) error----->"+e.toString());;
+				System.out.println("new FileOutputStream(Dimensionfile) error----->" + e.toString());
 			}
 			BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream);
 			DataOutputStream dataOutputStream = new DataOutputStream(bufferedOutputStream);
-			
+
 			try {
 				for (int i = 0; i < Dimensionlessdata.length; i++) {
 					dataOutputStream.writeFloat(Dimensionlessdata[i]);
 				}
 			} catch (Exception e) {
-				System.out.println("写入无量纲指标失败------->"+e.toString());
-			}finally{
+				System.out.println("写入无量纲指标失败------->" + e.toString());
+			} finally {
 				dataOutputStream.close();
 			}
-			
+
 			//判断最大保存数量来清理当前文件夹下的文件（保存最新的n条记录）
 			cleanSomeOldFile(dirName);
-		}else {
+		} else {
 			//提示没有内存卡
 		}
 	}
-	
+
 	@SuppressLint("LongLogTag")
 	@Override
 	public void run() {
 		try {
-				for (int i = 0; i < 6; i++) {
+			for (int i = 0; i < 6; i++) {
+				if (GlobleVariable.ReadFromWeb) {
+					DimensionlessData[i] = tmpBuf[i];
+				} else {
 					ClassDealPCMdata dealPCMdata = new ClassDealPCMdata(tmpBuf, i);
 					DimensionlessData[i] = dealPCMdata.getDimensionless();
-					Log.e("DimensionlessData: >>>>>>>>>>>", Arrays.toString(DimensionlessData));
-//					System.out.println("DimensionlessData: >>>>>>>>>>>"+DimensionlessData[i]);
 				}
-				//这里保存的一条数据包含无量纲指标6种值
-				SaveDimensionlessdata(saveDirName, saveFileName, DimensionlessData);
+//				Log.e("DimensionlessData: >>>>>>>>>>>", Arrays.toString(DimensionlessData));
+//					System.out.println("DimensionlessData: >>>>>>>>>>>"+DimensionlessData[i]);
+			}
+			//这里保存的一条数据包含无量纲指标6种值
+			SaveDimensionlessdata(saveDirName, saveFileName, DimensionlessData);
 		} catch (IOException e) {
-			System.out.println("保存无量纲指标失败 ------->"+e.toString());
+			System.out.println("保存无量纲指标失败 ------->" + e.toString());
 		}
 
 	}

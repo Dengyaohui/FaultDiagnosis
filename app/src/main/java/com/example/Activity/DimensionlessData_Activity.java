@@ -170,7 +170,7 @@ public class DimensionlessData_Activity extends Activity implements View.OnTouch
 
 	private void initUI(){
 		
-		chooseDateTimeLayout = (LinearLayout)findViewById(R.id.chooseDateTime_LinerLayout);
+		chooseDateTimeLayout = findViewById(R.id.chooseDateTime_LinerLayout);
 		//获取该LinearLayout高度
 		ViewTreeObserver vto = chooseDateTimeLayout.getViewTreeObserver();
 		vto.addOnPreDrawListener(new OnPreDrawListener() {
@@ -189,43 +189,43 @@ public class DimensionlessData_Activity extends Activity implements View.OnTouch
 			}
 		});
 		
-		recently_1minBtn=(RadioButton)findViewById(R.id.radio_recently1min);
+		recently_1minBtn= findViewById(R.id.radio_recently1min);
 		recently_1minBtn.setOnCheckedChangeListener(this);
-		recently_5minBtn=(RadioButton)findViewById(R.id.radio_recently5min);
+		recently_5minBtn= findViewById(R.id.radio_recently5min);
 		recently_5minBtn.setOnCheckedChangeListener(this);
-		custom_Btn=(RadioButton)findViewById(R.id.radio_customTime);
+		custom_Btn= findViewById(R.id.radio_customTime);
 		custom_Btn.setOnCheckedChangeListener(this);
 		
-		tabBtn1_underLine = (ImageView)findViewById(R.id.tabButton1_underLine);
-		tabBtn2_underLine = (ImageView)findViewById(R.id.tabButton2_underLine);
-		tabBtn3_underLine = (ImageView)findViewById(R.id.tabButton3_underLine);
+		tabBtn1_underLine = findViewById(R.id.tabButton1_underLine);
+		tabBtn2_underLine = findViewById(R.id.tabButton2_underLine);
+		tabBtn3_underLine = findViewById(R.id.tabButton3_underLine);
 		
-		startBtn = (ImageButton)findViewById(R.id.startButton);
+		startBtn = findViewById(R.id.startButton);
 		startBtn.setOnClickListener(this);
-		stopBtn = (ImageButton)findViewById(R.id.stopButton);
+		stopBtn = findViewById(R.id.stopButton);
 		stopBtn.setOnClickListener(this);
 		
-		editStartTime = (EditText)this.findViewById(R.id.edit_start_time);
+		editStartTime = this.findViewById(R.id.edit_start_time);
     	editStartTime.setOnTouchListener(this);
-    	editEndTime = (EditText)this.findViewById(R.id.edit_end_time);
+    	editEndTime = this.findViewById(R.id.edit_end_time);
     	editEndTime.setOnTouchListener(this);
-    	searchButton = (ImageButton)findViewById(R.id.search_Imagebutton);
+    	searchButton = findViewById(R.id.search_Imagebutton);
     	searchButton.setOnClickListener(this);
     	
 	}
 	
 	 private void Init_Layout(){
-	    	mChartLayout1 = (LinearLayout)findViewById(R.id.LinearLayoutView1);
+	    	mChartLayout1 = findViewById(R.id.LinearLayoutView1);
 			timeChart1 = new TimeChart(Color.YELLOW, PointStyle.CIRCLE, "烈度指标值", "时刻点", "指标值");
-			mChartLayout2 = (LinearLayout)findViewById(R.id.LinearLayoutView2);
+			mChartLayout2 = findViewById(R.id.LinearLayoutView2);
 			timeChart2 = new TimeChart(Color.GREEN, PointStyle.CIRCLE, "脉冲指标值", "时刻点", "指标值");
-			mChartLayout3 = (LinearLayout)findViewById(R.id.LinearLayoutView3);
+			mChartLayout3 = findViewById(R.id.LinearLayoutView3);
 			timeChart3 = new TimeChart(Color.MAGENTA, PointStyle.CIRCLE, "欲度指标值", "时刻点", "指标值");
-			mChartLayout4 = (LinearLayout)findViewById(R.id.LinearLayoutView4);
+			mChartLayout4 = findViewById(R.id.LinearLayoutView4);
 			timeChart4 = new TimeChart(Color.CYAN, PointStyle.CIRCLE, "峰值指标值", "时刻点", "指标值");
-			mChartLayout5 = (LinearLayout)findViewById(R.id.LinearLayoutView5);
+			mChartLayout5 = findViewById(R.id.LinearLayoutView5);
 			timeChart5 = new TimeChart(Color.BLUE, PointStyle.CIRCLE, "峭度指标值", "时刻点", "指标值");
-			mChartLayout6 = (LinearLayout)findViewById(R.id.LinearLayoutView6);
+			mChartLayout6 = findViewById(R.id.LinearLayoutView6);
 			timeChart6 = new TimeChart(Color.RED, PointStyle.CIRCLE, "波形指标值", "时刻点", "指标值");
 	    }
 
@@ -575,8 +575,8 @@ public class DimensionlessData_Activity extends Activity implements View.OnTouch
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
 				View v = View.inflate(context, R.layout.date_time_dialog, null);
 				builder.setView(v);
-				final DatePicker datePicker = (DatePicker)v.findViewById(R.id.datePicker);
-				final TimePicker timePicker = (TimePicker)v.findViewById(R.id.timePicker);
+				final DatePicker datePicker = v.findViewById(R.id.datePicker);
+				final TimePicker timePicker = v.findViewById(R.id.timePicker);
 				
 				Calendar calendar = Calendar.getInstance();
 				calendar.setTimeInMillis(System.currentTimeMillis());

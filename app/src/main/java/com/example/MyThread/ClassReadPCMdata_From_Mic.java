@@ -21,7 +21,7 @@ public class ClassReadPCMdata_From_Mic extends Thread{
 	private int recBufSize;
 	private AudioRecord audioRecord;
 
-	short[] tmpBuf;
+	Float[] tmpBuf;
 
 	/**
 	 * X轴缩小比例
@@ -54,11 +54,11 @@ public class ClassReadPCMdata_From_Mic extends Thread{
 			while(ClassShowCurData.isRecording){
 				int bufferReadResult = audioRecord.read(buffer, 0, recBufSize); //读取1024个,返回512,bufferReadResult = 640
 				//将原来的数据缩小到rateX分之一
-				tmpBuf = new short[bufferReadResult/rateX];
+				tmpBuf = new Float[bufferReadResult / rateX];
 				old_tmpBufLength = bufferReadResult/rateX;
 
 				for (int i = 0, ii=0; i < tmpBuf.length; i++, ii=i*rateX) {
-					tmpBuf[i] = buffer[ii];
+					tmpBuf[i] = Float.valueOf(buffer[ii]);
 				}
 				//同一时刻最多只有一个线程执行这段代码，避免重复数据
 				synchronized (ClassShowCurData.inBuf) {

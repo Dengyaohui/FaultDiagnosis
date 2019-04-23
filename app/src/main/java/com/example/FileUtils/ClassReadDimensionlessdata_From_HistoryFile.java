@@ -165,15 +165,15 @@ public class ClassReadDimensionlessdata_From_HistoryFile {
 	 */
 	public List<ArrayList<Float>> getDimensionlessData_fromFile(){
 		
-		List<ArrayList<Float>> All_DimensionlessData = new ArrayList<ArrayList<Float>>();
+		List<ArrayList<Float>> All_DimensionlessData = new ArrayList<>();
 		File[] allFiles = getFiles(type);
 		if(allFiles!=null){
-			ArrayList<Float> DimensionlessData1 = new ArrayList<Float>();
-			ArrayList<Float> DimensionlessData2 = new ArrayList<Float>();
-			ArrayList<Float> DimensionlessData3 = new ArrayList<Float>();
-			ArrayList<Float> DimensionlessData4 = new ArrayList<Float>();
-			ArrayList<Float> DimensionlessData5 = new ArrayList<Float>();
-			ArrayList<Float> DimensionlessData6 = new ArrayList<Float>();
+			ArrayList<Float> DimensionlessData1 = new ArrayList<>();
+			ArrayList<Float> DimensionlessData2 = new ArrayList<>();
+			ArrayList<Float> DimensionlessData3 = new ArrayList<>();
+			ArrayList<Float> DimensionlessData4 = new ArrayList<>();
+			ArrayList<Float> DimensionlessData5 = new ArrayList<>();
+			ArrayList<Float> DimensionlessData6 = new ArrayList<>();
 			for(File curFile : allFiles){
 				File file = new File(curFile.getAbsolutePath());
 				try {

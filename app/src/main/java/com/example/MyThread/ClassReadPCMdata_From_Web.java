@@ -2,6 +2,7 @@ package com.example.MyThread;
 
 import android.annotation.SuppressLint;
 import android.media.AudioRecord;
+import android.util.Log;
 
 import com.example.Activity.GlobleVariable;
 import com.example.FileUtils.ClassShowCurData;
@@ -18,8 +19,8 @@ import java.util.TimerTask;
 public class ClassReadPCMdata_From_Web extends Thread {
 
 	private AudioRecord audioRecord;
-	public static short[] tmpBuf;
-	public static short[] tmpBufFromWeb;
+	public static Float[] tmpBuf;
+	public static Float[] tmpBufFromWeb = new Float[99];
 	private int recBufSize;
 
 	/**
@@ -41,10 +42,17 @@ public class ClassReadPCMdata_From_Web extends Thread {
 
 	/**
 	 * 用于保存接收的Json数据
-	 * 电压值 volet ；时间 create_time ；
+	 * 电压值 volet ；时间 create_time ；烈度 V_rms ;脉冲 Plusevalue ;欲度 Marginvalue ;峰值 Ppeakvalue ;峭度 Kurtuosis ;
 	 */
-	public static ArrayList<Short> volet = new ArrayList<>();
+	public static ArrayList<Float> volet = new ArrayList<>();
 	public static ArrayList<String> create_time = new ArrayList<>();
+	public static ArrayList<Float> V_rms = new ArrayList<>();
+	public static ArrayList<Float> Plusevalue = new ArrayList<>();
+	public static ArrayList<Float> Marginvalue = new ArrayList<>();
+	public static ArrayList<Float> Ppeakvalue = new ArrayList<>();
+	public static ArrayList<Float> Kurtuosis = new ArrayList<>();
+
+	public static Float[] DimensionlessDataFromWeb = new Float[6];
 
 	public ClassReadPCMdata_From_Web(AudioRecord audioRecord, int recBufSize) {
 		this.audioRecord = audioRecord;
@@ -60,11 +68,11 @@ public class ClassReadPCMdata_From_Web extends Thread {
 			while (ClassShowCurData.isRecording) {
 				int bufferReadResult = audioRecord.read(buffer, 0, recBufSize); //读取1024个,返回512,bufferReadResult = 640
 				//将原来的数据缩小到rateX分之一
-				tmpBuf = new short[bufferReadResult / rateX];
+				tmpBuf = new Float[bufferReadResult / rateX];
 				old_tmpBufLength = bufferReadResult / rateX;
 
 				for (int i = 0, ii = 0; i < tmpBuf.length; i++, ii = i * rateX) {
-					tmpBuf[i] = buffer[ii];
+					tmpBuf[i] = Float.valueOf(buffer[ii]);
 				}
 
 				//同一时刻最多只有一个线程执行这段代码，避免重复数据
@@ -96,26 +104,43 @@ public class ClassReadPCMdata_From_Web extends Thread {
 					String curTime = create_time.get(GlobleVariable.SecondCount);
 					System.out.println("Save Data at Time: " + curTime);
 
-					tmpBufFromWeb = new short[volet.size()];
+					for (int i = 0;i < tmpBufFromWeb.length;i++){
+						Log.e("tmpBufFromWeb[i]>>>>>>>>>>>>>>>", String.valueOf(tmpBufFromWeb[i]));
+					}
+
 					tmpBufFromWeb[GlobleVariable.SecondCount] = volet.get(GlobleVariable.SecondCount);
+					for(int i = GlobleVariable.SecondCount ;i < tmpBufFromWeb.length;i ++){
+						tmpBufFromWeb[i] = 0f;
+					}
+
+					DimensionlessDataFromWeb[0] =V_rms.get(GlobleVariable.SecondCount);
+					DimensionlessDataFromWeb[1] =Plusevalue.get(GlobleVariable.SecondCount);
+					DimensionlessDataFromWeb[2] =Marginvalue.get(GlobleVariable.SecondCount);
+					DimensionlessDataFromWeb[3] =Ppeakvalue.get(GlobleVariable.SecondCount);
+					DimensionlessDataFromWeb[4] =Kurtuosis.get(GlobleVariable.SecondCount);
+					DimensionlessDataFromWeb[5] =volet.get(GlobleVariable.SecondCount);
+
 
 					//采集中
 					//保存原始数据
 					new ClassSavePCMdata(tmpBufFromWeb, "云端原始数据", curTime + ".pcm", GlobleVariable.PER_1S_HISTORY_FILE_MAX_NUM).start();
 					//计算并保存无量纲指标值
-					new ClassSaveDimensionless_Parameter_Data(tmpBufFromWeb, "云端无量纲指标", curTime + ".txt", GlobleVariable.PER_1S_DIMENSION_LESS_FILE_MAX_NUM).start();
-					//每5分钟保存到另一文件夹下
-					if (GlobleVariable.SecondCount == volet.size()) {
+					new ClassSaveDimensionless_Parameter_Data(DimensionlessDataFromWeb, "云端无量纲指标", curTime + ".txt", GlobleVariable.PER_1S_DIMENSION_LESS_FILE_MAX_NUM).start();
+
+					if (GlobleVariable.SecondCount == 300) {
 						new ClassSavePCMdata(tmpBufFromWeb, "云端每5分钟原始数据", curTime + ".pcm", GlobleVariable.PER_5MIN_HISTORY_FILE_MAX_NUM).start();
-						new ClassSaveDimensionless_Parameter_Data(tmpBufFromWeb, "云端每5分钟无量纲指标", curTime + ".txt", GlobleVariable.PER_5MIN_DIMENSION_LESS_FILE_MAX_NUM).start();
-						GlobleVariable.SecondCount = 0;
-						WebDataReceive.ReceiveDataFromWeb();
+						new ClassSaveDimensionless_Parameter_Data(DimensionlessDataFromWeb, "云端每5分钟无量纲指标", curTime + ".txt", GlobleVariable.PER_5MIN_DIMENSION_LESS_FILE_MAX_NUM).start();
 					}
 				}
 			}
-			if (GlobleVariable.SecondCount < volet.size()) {
+			if (GlobleVariable.SecondCount <= volet.size()) {
 				// TODO Auto-generated method stub
 				GlobleVariable.SecondCount++;
+//				Log.e("读秒>>>>>>>>>>>>>>>>>>>", String.valueOf(GlobleVariable.SecondCount));
+			}else {
+				GlobleVariable.SecondCount = 0;
+				WebDataReceive.ReceiveDataFromWeb();
+				tmpBufFromWeb=null;
 			}
 		}
 	};

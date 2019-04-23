@@ -109,7 +109,7 @@ public class ImportDataFromFile_Activity extends Activity implements OnClickList
 	/**
 	 * 用于保存当前数据
 	 */
-	private short[] curData;
+	private float[] curData;
 	/**
 	 * 用于保存当前无量纲指标数据
 	 */
@@ -305,7 +305,7 @@ public class ImportDataFromFile_Activity extends Activity implements OnClickList
 	 *
 	 * @param historyData
 	 */
-	private void initOriginalListView(final short[] historyData) {
+	private void initOriginalListView(final float[] historyData) {
 		if (historyData != null) {
 			List<HashMap<String, String>> originalDatas = new ArrayList<HashMap<String, String>>();
 			for (int i = 0; i < historyData.length; i++) {
@@ -407,8 +407,8 @@ public class ImportDataFromFile_Activity extends Activity implements OnClickList
 	/**
 	 * 自适应坐标轴
 	 */
-	private void fit(short[] data, XYMultipleSeriesRenderer mSeriiesXYRenderer) {
-		int max = 0;
+	private void fit(float[] data, XYMultipleSeriesRenderer mSeriiesXYRenderer) {
+		Float max = Float.valueOf(0);
 		for (int i = 0; i < data.length; i++) {
 			if (Math.abs(data[i]) > max)
 				max = data[i];
@@ -452,7 +452,7 @@ public class ImportDataFromFile_Activity extends Activity implements OnClickList
 	 *
 	 * @param fileName
 	 */
-	private short[] getImportData(String fileName) {
+	private float[] getImportData(String fileName) {
 		File historyFile = new File(fileName);
 
 		//保存当前路径所有文件名
@@ -460,7 +460,7 @@ public class ImportDataFromFile_Activity extends Activity implements OnClickList
 
 		//写进文件的数据是16位的，因为有正负，所以创建历史记录缓存区时长度为一半
 		int length = (int) (historyFile.length() / 2);
-		short[] historyData = new short[length];
+		float[] historyData = new float[length];
 
 		try {
 			InputStream inputStream = new FileInputStream(historyFile);
