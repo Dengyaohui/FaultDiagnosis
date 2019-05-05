@@ -26,7 +26,7 @@ public class ClassShowCurData {
 	/**
 	 * 将每帧数据添加到该列表中
 	 */
-	public static ArrayList<Float[]> inBuf = new ArrayList<>();
+	public static ArrayList<float[]> inBuf = new ArrayList<>();
 	/**
 	 * 线程控制标记
 	 */
@@ -116,7 +116,7 @@ public class ClassShowCurData {
 				//暂停中
 				System.out.println("机器暂停采集~~~");
 				//根据原来原始数据缓存区的大小新建一个数组并全用0填充
-				Float[] newtmpBuf = new Float[ClassReadPCMdata_From_Mic.old_tmpBufLength];
+				float[] newtmpBuf = new float[ClassReadPCMdata_From_Mic.old_tmpBufLength];
 				for (int i = 0; i < newtmpBuf.length; i++) {
 					newtmpBuf[i] = Float.valueOf(0);
 				}

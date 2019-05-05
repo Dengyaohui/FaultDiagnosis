@@ -97,7 +97,7 @@ public class TimeChart {
 		
 		renderer.setShowLegend(true);                           //是否显示图例
 		renderer.setShowGrid(true);                             //是否显示网格
-		renderer.setPointSize((float)2);
+		renderer.setPointSize(2f);
 		renderer.setLegendTextSize(20);                         //图例文字大小
 		
 		renderer.setClickEnabled(false);
@@ -192,7 +192,7 @@ public class TimeChart {
 
 	/**
 	 * 创建数据集（原始数据用）
-	 * @param data        原始数据是short类型的
+	 * @param data        原始数据是float类型的
 	 * @param seriesTitle 图表标签
 	 * @return
 	 */

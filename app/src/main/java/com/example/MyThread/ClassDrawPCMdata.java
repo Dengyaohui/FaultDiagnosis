@@ -78,7 +78,7 @@ public class ClassDrawPCMdata extends Thread{
 	 * @param rate      y轴数据缩小的比例
 	 * @param baseLine  y轴基线
 	 */
-	void SimpleDrawCur(SurfaceView sfv, int start, float Y_index, Float[] buffer, int rate, int baseLine){
+	void SimpleDrawCur(SurfaceView sfv, int start, float Y_index, float[] buffer, int rate, int baseLine){
 		if(start == 0)
 			oldX = 0;
 
@@ -138,19 +138,19 @@ public class ClassDrawPCMdata extends Thread{
 		//没有传进历史数据，即现在是实时采集显示
 		if(historyBuf==null){
 			while(ClassShowCurData.isRecording){
-				ArrayList<Float[]> buf;
+				ArrayList<float[]> buf;
 				synchronized (ClassShowCurData.inBuf) {
 					//输入数据缓存区无数据就跳过下面语句再一次循环
 					if(ClassShowCurData.inBuf.size()==0)
 						continue;
 					//将当前缓存中的数据复制一份并返回给buf
-					buf = (ArrayList<Float[]>) ClassShowCurData.inBuf.clone();
+					buf = (ArrayList<float[]>) ClassShowCurData.inBuf.clone();
 					//连续画3组数据后就清空缓存区
 					if(ClassShowCurData.inBuf.size() >3)
 						ClassShowCurData.inBuf.clear();
 				}
 				for (int i = 0; i < buf.size(); i++) {
-					Float[] tmpBuf =  buf.get(i);
+					float[] tmpBuf =  buf.get(i);
 					//将当前缓存数据绘制出来
 					if(tmpBuf.length>0)
 						SimpleDrawCur(sfv, X_index, Y_index, tmpBuf, rateY, baseLine);

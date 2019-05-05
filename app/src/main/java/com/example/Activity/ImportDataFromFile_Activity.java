@@ -418,7 +418,7 @@ public class ImportDataFromFile_Activity extends Activity implements OnClickList
 		mSeriiesXYRenderer.setYAxisMax(Math.ceil(max / 10) * 10);
 		mSeriiesXYRenderer.setYLabels(30);
 		//x轴
-		mSeriiesXYRenderer.setXAxisMax(data.length);
+		mSeriiesXYRenderer.setXAxisMax(data.length/2);
 		mSeriiesXYRenderer.setXLabels(data.length / 10);
 		//根据当前情况对渲染器做一点修改
 		mSeriiesXYRenderer.setPanLimits(new double[]{0, data.length + data.length / 10, -(max * 2), max * 2});
@@ -469,7 +469,7 @@ public class ImportDataFromFile_Activity extends Activity implements OnClickList
 
 			int i = 0;
 			while (dataInputStream.available() > 0) {
-				historyData[i] = dataInputStream.readShort();
+				historyData[i] = dataInputStream.readFloat();
 				i++;
 			}
 			dataInputStream.close();

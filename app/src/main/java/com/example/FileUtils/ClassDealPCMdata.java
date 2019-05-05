@@ -10,13 +10,13 @@ public class ClassDealPCMdata{
 	/**
 	 * 历史数据
 	 */
-	private Float[] historyData = null;
+	private float[] historyData = null;
 	/**
 	 * 计算的指标类型     0>烈度  1>脉冲  2>欲度 3>峰值  4>峭度 5>波形
 	 */
 	private int arithmeticType;
 
-	public ClassDealPCMdata(Float[] historyData, int arithmeticType){
+	public ClassDealPCMdata(float[] historyData, int arithmeticType){
 		this.historyData = historyData;
 		this.arithmeticType = arithmeticType;
 	}
@@ -59,7 +59,7 @@ public class ClassDealPCMdata{
 	 * @param arithmeticType     使用的算法种类：0>计算烈度  1>计算脉冲  2>计算欲度  3>计算峰值  4>计算峭度 5>计算波形
 	 * @return
 	 */
-	private float deal_Dimensionless_Parameter(Float[] colleteData , int arithmeticType){
+	private float deal_Dimensionless_Parameter(float[] colleteData , int arithmeticType){
 		float average_Value = 0;
 		float sum = 0;
 		switch (arithmeticType) {

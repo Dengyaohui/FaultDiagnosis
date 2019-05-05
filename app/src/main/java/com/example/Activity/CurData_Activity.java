@@ -64,6 +64,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import static com.example.MyThread.ClassReadPCMdata_From_Web.DimensionlessDataFromWeb;
+import static com.example.MyThread.ClassReadPCMdata_From_Web.tmpBufFromWeb;
 
 /**
  * 实时采集数据界面
@@ -144,6 +145,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 	 * 用于保存当前数据
 	 */
 	private float[] curData;
+	private float[] curDataFromWeb = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 	/**
 	 * 用于保存当前无量纲指标数据
 	 */
@@ -237,6 +239,10 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		mReportDrawer=MenuDrawer.attach(this,Position.LEFT);
 		mReportDrawer.setContentView(R.layout.cur_data_activity);         //其实函数内是为该activity设置布局的
 		mReportDrawer.setMenuView(R.layout.report_menu);
+
+		for(int i = 0 ;i < tmpBufFromWeb.length;i ++){
+			tmpBufFromWeb[i] = 0f;
+		}
 
 		//初始化设置参数
 		init_Setting();
@@ -374,11 +380,11 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
-			curData = getNewestSecondData(GlobleVariable.WEB_CUR_DIMENSION_LESS_PER_1S);
-			curDimensionlissData = getNewestSecondDimensionlessData(GlobleVariable.WEB_CUR_DIMENSION_LESS_PER_1S);
-//			curDimensionlissData = DimensionlessDataFromWeb;
-			if (curData!=null && curDimensionlissData!=null) {
-				updateChartViewHandler.sendEmptyMessage(0);
+			curData = getNewestSecondData(GlobleVariable.CUR_ORIGINAL_DATA_PER_1S);
+//			curDimensionlissData = getNewestSecondDimensionlessData(GlobleVariable.WEB_CUR_DIMENSION_LESS_PER_1S);
+			curDimensionlissData = DimensionlessDataFromWeb;
+			if (curDataFromWeb!=null && curDimensionlissData!=null) {
+				updateChartViewHandler.sendEmptyMessage(1);
 			}
 		}
 	}
@@ -386,7 +392,11 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		@Override
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
-			updateChartView();
+			if(msg.what ==0){
+				updateChartView(curData);
+			}else {
+				updateChartView(curDataFromWeb);
+			}
 		}
 
 	};
@@ -420,7 +430,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 				i++;
 			}
 			while (i != curData.length){
-				curData[i] = 0;
+				curData[i] = 0f;
 				i++;
 			}
 
@@ -446,6 +456,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 			curDataTime[13] = ':';
 			curDataTime[16] = ':';
 			curlabel = String.valueOf(curDataTime);
+
 //		}
 
 		return curData;
@@ -602,7 +613,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 	}
 
 	/****************************************************更新图表波形***********************************************************************/
-	private void updateChartView(){
+	private void updateChartView(float[] curData){
 		XYMultipleSeriesDataset dataset = timeChart.createDataset(curData, "实时采集数据波形");
 		XYMultipleSeriesRenderer renderer = timeChart.createRenderer();
 
@@ -866,24 +877,6 @@ public class CurData_Activity extends Activity implements OnClickListener{
 	public void onClick(View view) {
 		// TODO Auto-generated method stub
 		switch (view.getId()) {
-			case R.id.webButton:
-				GlobleVariable.ReadFromWeb = true;
-				classShowCurData.baseLine = sfv.getHeight()/2;
-
-				if(GlobleVariable.ReadFromWeb){WebDataReceive.ReceiveDataFromWeb();}
-
-				//显示左上角麦克风绿色波形以及更新波形和无量纲指标
-				classShowCurData.StartForWeb(audioRecord, recBufSize, sfv, mPaint);
-				start_web_TimerTask();
-
-				sceneButton.setEnabled(false);
-				sceneButton.setTextColor(Color.WHITE);
-				stopButton.setEnabled(true);
-				stopButton.setTextColor(Color.WHITE);
-				webButton.setEnabled(false);
-				sceneButton.setTextColor(Color.rgb(60, 66, 68));
-				collctionTips.setText("采集中...");
-				break;
 			case R.id.startButton:
 				GlobleVariable.ReadFromWeb = false;
 				classShowCurData.baseLine = sfv.getHeight()/2;
@@ -892,8 +885,25 @@ public class CurData_Activity extends Activity implements OnClickListener{
 
 				start_local_TimerTask();
 
+				webButton.setEnabled(false);
+				webButton.setTextColor(Color.rgb(60, 66, 68));
+				stopButton.setEnabled(true);
+				stopButton.setTextColor(Color.WHITE);
+				collctionTips.setText("采集中...");
+				break;
+			case R.id.webButton:
+				GlobleVariable.ReadFromWeb = true;
+				classShowCurData.baseLine = sfv.getHeight()/2;
+
+				if(GlobleVariable.ReadFromWeb){
+					WebDataReceive.ReceiveDataFromWeb();}
+
+				//显示左上角麦克风绿色波形以及更新波形和无量纲指标
+				classShowCurData.StartForWeb(audioRecord, recBufSize, sfv, mPaint);
+				start_web_TimerTask();
+
 				sceneButton.setEnabled(false);
-				sceneButton.setTextColor(Color.rgb(60, 66, 68));
+				sceneButton.setTextColor(Color.WHITE);
 				stopButton.setEnabled(true);
 				stopButton.setTextColor(Color.WHITE);
 				webButton.setEnabled(false);

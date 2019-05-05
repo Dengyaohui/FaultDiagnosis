@@ -26,7 +26,7 @@ public class ClassSaveDimensionless_Parameter_Data extends Thread{
 	/**
 	 * 从读数据类中传过来的一秒所采集的数据
 	 */
-	private Float[] tmpBuf;
+	private float[] tmpBuf;
 	/**
 	 * 保存到的文件夹名
 	 */
@@ -54,7 +54,7 @@ public class ClassSaveDimensionless_Parameter_Data extends Thread{
 	 * @param saveFileName  以什么文件名保存
 	 * @param fileSaveMax   保存的最大数量
 	 */
-	public ClassSaveDimensionless_Parameter_Data(Float[] tmpBuf, String saveDirName, String saveFileName, int fileSaveMax){
+	public ClassSaveDimensionless_Parameter_Data(float[] tmpBuf, String saveDirName, String saveFileName, int fileSaveMax){
 		this.tmpBuf = tmpBuf;
 		this.saveDirName = saveDirName;
 		this.saveFileName = saveFileName;

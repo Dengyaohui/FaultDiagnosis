@@ -131,7 +131,7 @@ public class GlobleVariable {
 	 * 秒计数点（用于抽样不同时间段的数据保存到不同的文件夹下）
 	 */
 	public static int SecondCount = 0;
-//	public static int WebSecondCount = 0;
+	public static int WebSecondCount = 0;
 	
 	/**
 	 * 显示最近一分钟数据
