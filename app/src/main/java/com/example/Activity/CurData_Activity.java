@@ -380,7 +380,10 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
-			curData = getNewestSecondData(GlobleVariable.CUR_ORIGINAL_DATA_PER_1S);
+			curDataFromWeb = getNewestSecondData(GlobleVariable.CUR_ORIGINAL_DATA_PER_1S);
+			for (int i = 0;i < curDataFromWeb.length;i ++){
+				Log.e("curData>>>>>>>>>>>", String.valueOf(curDataFromWeb[i]));
+			}
 //			curDimensionlissData = getNewestSecondDimensionlessData(GlobleVariable.WEB_CUR_DIMENSION_LESS_PER_1S);
 			curDimensionlissData = DimensionlessDataFromWeb;
 			if (curDataFromWeb!=null && curDimensionlissData!=null) {
@@ -456,7 +459,6 @@ public class CurData_Activity extends Activity implements OnClickListener{
 			curDataTime[13] = ':';
 			curDataTime[16] = ':';
 			curlabel = String.valueOf(curDataTime);
-
 //		}
 
 		return curData;
@@ -682,6 +684,9 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		stopButton.setOnClickListener(this);
 		webButton = findViewById(R.id.webButton);
 		webButton.setOnClickListener(this);
+
+		stopButton.setEnabled(false);
+		stopButton.setTextColor(Color.rgb(60, 66, 68));
 
 		//得到画布和画笔
 		sfv = findViewById(R.id.surfaceView);
@@ -920,7 +925,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 				stopButton.setEnabled(false);
 				stopButton.setTextColor(Color.rgb(60, 66, 68));
 				webButton.setEnabled(true);
-				sceneButton.setTextColor(Color.WHITE);
+				webButton.setTextColor(Color.WHITE);
 				collctionTips.setText("停止采集");
 				break;
 			case R.id.pause_and_start_imageBtn:
