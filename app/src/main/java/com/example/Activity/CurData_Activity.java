@@ -64,6 +64,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import static com.example.MyThread.ClassReadPCMdata_From_Web.DimensionlessDataFromWeb;
+import static com.example.MyThread.ClassReadPCMdata_From_Web.create_time;
 import static com.example.MyThread.ClassReadPCMdata_From_Web.tmpBufFromWeb;
 
 /**
@@ -380,12 +381,17 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
-			curDataFromWeb = getNewestSecondData(GlobleVariable.CUR_ORIGINAL_DATA_PER_1S);
-			for (int i = 0;i < curDataFromWeb.length;i ++){
-				Log.e("curData>>>>>>>>>>>", String.valueOf(curDataFromWeb[i]));
-			}
+//			curDataFromWeb = getNewestSecondData(GlobleVariable.WEB_CUR_ORIGINAL_DATA_PER_1S);
+			curDataFromWeb = tmpBufFromWeb;
+//			for (int i = 0;i < curDataFromWeb.length;i ++){
+//				Log.e("curData>>>>>>>>>>>", String.valueOf(curDataFromWeb[i]));
+//			}
 //			curDimensionlissData = getNewestSecondDimensionlessData(GlobleVariable.WEB_CUR_DIMENSION_LESS_PER_1S);
 			curDimensionlissData = DimensionlessDataFromWeb;
+
+//			for (int i = 0;i < curDimensionlissData.length;i ++){
+//				Log.e("curDimensionlissData>>>>>>>>>>>", String.valueOf(curDimensionlissData[i]));
+//			}
 			if (curDataFromWeb!=null && curDimensionlissData!=null) {
 				updateChartViewHandler.sendEmptyMessage(1);
 			}
@@ -502,6 +508,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 			int i = 0;
 			while(dataInputStream.available()>0){
 				curDimensionlessData[i] = dataInputStream.readFloat();
+//				Log.e("curDimensionlessData[i]>>>>>>>>>>", String.valueOf(curDimensionlessData[i]));
 				i++;
 			}
 			//加入诊断报告(需要根据间隔时间判断是否生成报告)
@@ -618,6 +625,10 @@ public class CurData_Activity extends Activity implements OnClickListener{
 	private void updateChartView(float[] curData){
 		XYMultipleSeriesDataset dataset = timeChart.createDataset(curData, "实时采集数据波形");
 		XYMultipleSeriesRenderer renderer = timeChart.createRenderer();
+
+		if (curlabel == null){
+			curlabel = create_time.get(GlobleVariable.WebSecondCount);
+		}
 
 		//加入诊断报告(需要根据间隔时间判断是否生成报告)
 		Add2ReportList(curlabel, curDimensionlissData);
