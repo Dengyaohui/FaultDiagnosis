@@ -18,8 +18,9 @@ import java.util.TimerTask;
 public class ClassReadPCMdata_From_Web extends Thread {
 
 	private AudioRecord audioRecord;
-	public static Float[] tmpBuf;
-	public static float[] tmpBufFromWeb = new float[100];
+	public static float[] tmpBuf;
+//	public static float[] tmpBufFromWeb = new float[100];
+	public static float[] tmpBufFromWeb = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 	private int recBufSize;
 
 	/**
@@ -56,7 +57,7 @@ public class ClassReadPCMdata_From_Web extends Thread {
 	public ClassReadPCMdata_From_Web(AudioRecord audioRecord, int recBufSize) {
 		this.audioRecord = audioRecord;
 		this.recBufSize = recBufSize;
-		timer.schedule(timerTask, 1000, 1000);  //timer.schedule(task, delay, period) 	delay为long,period为long：从现在起过delay毫秒以后，每隔period毫秒执行一次。
+		timer.schedule(timerTask, 1000, 2000);  //timer.schedule(task, delay, period) 	delay为long,period为long：从现在起过delay毫秒以后，每隔period毫秒执行一次。
 
 	}
 
@@ -68,17 +69,17 @@ public class ClassReadPCMdata_From_Web extends Thread {
 			while (ClassShowCurData.isRecording) {
 				int bufferReadResult = audioRecord.read(buffer, 0, recBufSize); //读取1024个,返回512,bufferReadResult = 640
 				//将原来的数据缩小到rateX分之一
-				tmpBuf = new Float[bufferReadResult / rateX];
+				tmpBuf = new float[bufferReadResult / rateX];
 				old_tmpBufLength = bufferReadResult / rateX;
 
 				for (int i = 0, ii = 0; i < tmpBuf.length; i++, ii = i * rateX) {
-					tmpBuf[i] = Float.valueOf(buffer[ii]);
+					tmpBuf[i] = (float) buffer[ii];
 				}
 
 				//同一时刻最多只有一个线程执行这段代码，避免重复数据
-//				synchronized (ClassShowCurData.inBuf) {
-//					ClassShowCurData.inBuf.add(tmpBuf);
-//				}
+				synchronized (ClassShowCurData.inBuf) {
+					ClassShowCurData.inBuf.add(tmpBuf);
+				}
 			}
 
 			//停止后删除任务，否则一直保存同一个tmpBuf的值

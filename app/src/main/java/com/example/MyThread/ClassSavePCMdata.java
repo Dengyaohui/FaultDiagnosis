@@ -131,7 +131,7 @@ public class ClassSavePCMdata extends Thread{
 //					System.out.print("有效值个数>>>>>>>>>" + tmpBuf.length);	//640个有效值
 				}
 			} catch (Exception e) {
-				System.out.println("write pcm data to file error------->"+e.toString());
+				System.out.println("Write pcm data to file error------->"+e.toString());
 			}finally{
 				dataOutputStream.close();
 			}

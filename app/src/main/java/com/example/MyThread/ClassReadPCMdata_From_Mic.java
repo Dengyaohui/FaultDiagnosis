@@ -2,7 +2,6 @@ package com.example.MyThread;
 
 import android.annotation.SuppressLint;
 import android.media.AudioRecord;
-import android.util.Log;
 
 import com.example.Activity.GlobleVariable;
 import com.example.FileUtils.ClassShowCurData;
@@ -54,7 +53,7 @@ public class ClassReadPCMdata_From_Mic extends Thread{
 			audioRecord.startRecording();
 			while(ClassShowCurData.isRecording){
 				int bufferReadResult = audioRecord.read(buffer, 0, recBufSize); //读取1024个,返回512,bufferReadResult = 640
-				Log.e("bufferReadResult>>>>>>>>>>", String.valueOf(bufferReadResult));
+//				Log.e("bufferReadResult>>>>>>>>>>", String.valueOf(bufferReadResult));
 				//将原来的数据缩小到rateX分之一
 				tmpBuf = new float[bufferReadResult / rateX];
 				old_tmpBufLength = bufferReadResult/rateX;
