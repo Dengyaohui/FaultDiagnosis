@@ -22,6 +22,7 @@ import static com.example.MyThread.ClassReadPCMdata_From_Web.Ppeakvalue;
 import static com.example.MyThread.ClassReadPCMdata_From_Web.V_rms;
 import static com.example.MyThread.ClassReadPCMdata_From_Web.create_time;
 import static com.example.MyThread.ClassReadPCMdata_From_Web.volet;
+import static java.lang.String.valueOf;
 
 
 /**
@@ -38,19 +39,27 @@ public class WebDataReceive {
 	public static void ReceiveDataFromWeb() {
 		OkHttpClient client = new OkHttpClient();
 
+		//POST请求
 		FormBody formBody = new FormBody.Builder()
 				.add("uid", "001")
 				.build();
 
 		Request request = new Request.Builder()
-				.url("http://139.199.60.80/php/DLX/shopping/public/index.php/index/wave/waveList")
-				.post(formBody)				//默认就是GET请求，可以不写
+				.url("http://139.199.60.80/php/DLX/cv/public/index.php/index/wave/waveList")	//GET方式：http://139.199.60.80/php/DLX/cv/public/index.php/index/wave/waveList?uid=001
+				.post(formBody)				//默认就是GET请求就可以不写，这里是post
 				.build();
+
+		//GET请求方法
+//		Request request = new Request.Builder()
+//				.url("http://139.199.60.80/php/DLX/cv/public/index.php/index/wave/waveList?uid=001")	//GET方式：http://139.199.60.80/php/DLX/cv/public/index.php/index/wave/waveList?uid=001
+//				.get()			//默认就是GET请求就可以不写
+//				.build();
+
 		Call call = client.newCall(request);
 		call.enqueue(new Callback() {
 			@Override
 			public void onFailure(Call call, IOException e) {
-				Log.e("onFailure: ", String.valueOf(e));
+				Log.e("onFailure: ", valueOf(e));
 			}
 
 			@Override
@@ -60,18 +69,21 @@ public class WebDataReceive {
 					JSONObject jsonObject = new JSONObject(jsonString);
 					JSONArray jsonArray = jsonObject.getJSONArray("data");
 //					Log.i("data>>>>>>>>>>>>>>", String.valueOf(jsonArray));
-					for(int i = 0;i < jsonArray.length();i++){
-						JSONObject dataObject = (JSONObject) jsonArray.get(i);
-						volet.add(Float.valueOf(dataObject.getString("volet")));
-						V_rms.add(Float.valueOf(dataObject.getString("V_rms")));
-						Plusevalue.add(Float.valueOf(dataObject.getString("Plusevalue")));
-						Marginvalue.add(Float.valueOf(dataObject.getString("Marginvalue")));
-						Ppeakvalue.add(Float.valueOf(dataObject.getString("Ppeakvalue")));
-						Kurtuosis.add(Float.valueOf(dataObject.getString("Kurtuosis")));
-						create_time.add(dataObject.getString("create_time"));
-					}
+						JSONObject dataObject = (JSONObject) jsonArray.get(0);
+						String voletString = dataObject.getString("volet");
+						String voletStringArray[] = voletString.split(",");
+						for (int i = 0;i < voletStringArray.length;i ++){
+							volet[i] = Float.parseFloat(voletStringArray[i]);
+						}
+						V_rms = Float.parseFloat(dataObject.getString("V_rms"));
+						Plusevalue = Float.parseFloat(dataObject.getString("Plusevalue"));
+						Marginvalue = Float.parseFloat(dataObject.getString("Marginvalue"));
+						Ppeakvalue = Float.parseFloat(dataObject.getString("Ppeakvalue"));
+						Kurtuosis = Float.parseFloat(dataObject.getString("Kurtuosis"));
+						create_time = dataObject.getString("create_time");
 				} catch (JSONException e) {
 					e.printStackTrace();
+					System.out.print(">>>>>>>>>>>Json数据解析错误!");
 				}
 			}
 		});

@@ -39,7 +39,6 @@ import com.example.MyUtilClass.Show_first_item_pressed.RestartTimerTask_CallBack
 import com.example.MyUtilClass.Show_second_item_pressed;
 import com.example.MyUtilClass.Show_third_item_pressed;
 import com.example.MyUtilClass.Util;
-import com.example.Web.WebDataReceive;
 import com.touchmenotapps.widget.radialmenu.menu.v1.RadialMenuItem;
 import com.touchmenotapps.widget.radialmenu.menu.v1.RadialMenuWidget;
 
@@ -63,7 +62,6 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static com.example.MyThread.ClassReadPCMdata_From_Web.DimensionlessDataFromWeb;
 import static com.example.MyThread.ClassReadPCMdata_From_Web.create_time;
 import static com.example.MyThread.ClassReadPCMdata_From_Web.tmpBufFromWeb;
 
@@ -381,13 +379,13 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
-//			curDataFromWeb = getNewestSecondData(GlobleVariable.WEB_CUR_ORIGINAL_DATA_PER_1S);
-			curDataFromWeb = tmpBufFromWeb;
+			curDataFromWeb = getNewestSecondData(GlobleVariable.WEB_CUR_ORIGINAL_DATA_PER_1S);
+//			curDataFromWeb = tmpBufFromWeb;
 //			for (int i = 0;i < curDataFromWeb.length;i ++){
 //				Log.e("curData>>>>>>>>>>>", String.valueOf(curDataFromWeb[i]));
 //			}
-//			curDimensionlissData = getNewestSecondDimensionlessData(GlobleVariable.WEB_CUR_DIMENSION_LESS_PER_1S);
-			curDimensionlissData = DimensionlessDataFromWeb;
+			curDimensionlissData = getNewestSecondDimensionlessData(GlobleVariable.WEB_CUR_DIMENSION_LESS_PER_1S);
+//			curDimensionlissData = DimensionlessDataFromWeb;
 
 //			for (int i = 0;i < curDimensionlissData.length;i ++){
 //				Log.e("curDimensionlissData>>>>>>>>>>>", String.valueOf(curDimensionlissData[i]));
@@ -447,7 +445,9 @@ public class CurData_Activity extends Activity implements OnClickListener{
 			Log.e("获取最新一秒原始数据失败----->",e.toString());
 		}finally{
 			try {
-				dataInputStream.close();
+				if (dataInputStream != null) {
+					dataInputStream.close();
+				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -478,10 +478,13 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		File[] files = curDir.listFiles();
 		//按时间顺序排序(新到旧)
 		Class_SortFileAtModifiedTime sortFiles = new Class_SortFileAtModifiedTime(files);
+//		Log.e("sortFiles", String.valueOf(sortFiles));
 		files = null;
 		files = sortFiles.getSortFiles();
 
+//		Log.e("files", Arrays.toString(files));
 		return files[0].getAbsolutePath();
+
 	}
 	/**
 	 * 读取最新一秒数据的文件并获取无量纲指标数据保存到curDimensionlissData数组中
@@ -627,7 +630,7 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		XYMultipleSeriesRenderer renderer = timeChart.createRenderer();
 
 		if (curlabel == null){
-			curlabel = create_time.get(GlobleVariable.WebSecondCount);
+			curlabel = create_time;
 		}
 
 		//加入诊断报告(需要根据间隔时间判断是否生成报告)
@@ -910,9 +913,6 @@ public class CurData_Activity extends Activity implements OnClickListener{
 			case R.id.webButton:
 				GlobleVariable.ReadFromWeb = true;
 				classShowCurData.baseLine = sfv.getHeight()/2;
-
-				if(GlobleVariable.ReadFromWeb){
-					WebDataReceive.ReceiveDataFromWeb();}
 
 				//显示左上角麦克风绿色波形以及更新波形和无量纲指标
 				classShowCurData.StartForWeb(audioRecord, recBufSize, sfv, mPaint);

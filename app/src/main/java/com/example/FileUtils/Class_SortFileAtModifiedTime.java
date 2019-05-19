@@ -22,11 +22,12 @@ public class Class_SortFileAtModifiedTime {
 	public File[] getSortFiles(){
 		File[] returnFiles;
 		
-		Map<Date, File> treeMap = new TreeMap<Date, File>(new MyComparator());
+		Map<Date, File> treeMap = new TreeMap<>(new MyComparator());
 		for (int i = 0; i < files.length; i++) {
 			treeMap.put(new Date(files[i].lastModified()), files[i]);
 		}
-		returnFiles = (File[])treeMap.values().toArray(new File[0]);
+		returnFiles = treeMap.values().toArray(new File[0]);
+//		Log.e("returnFiles", Arrays.toString(returnFiles));
 
 		return returnFiles;
 	}
