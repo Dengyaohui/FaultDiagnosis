@@ -18,8 +18,8 @@ public class ClassReadPCMdata_From_Web extends Thread {
 
 	private AudioRecord audioRecord;
 	public static float[] tmpBuf;
-//	public static float[] tmpBufFromWeb = new float[100];
-	public static float[] tmpBufFromWeb = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	public static float[] tmpBufFromWeb = new float[50];
+//	public static float[] tmpBufFromWeb = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 	private int recBufSize;
 
 	/**
@@ -43,15 +43,15 @@ public class ClassReadPCMdata_From_Web extends Thread {
 	 * 用于保存接收的Json数据
 	 * 电压值 volet ；时间 create_time ；烈度 V_rms ;脉冲 Plusevalue ;欲度 Marginvalue ;峰值 Ppeakvalue ;峭度 Kurtuosis ;
 	 */
-	public static float[] volet = new float[100];
+	public static float[] volet = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 	public static String create_time = "0000-00-00 00:00：00";
-	public static float V_rms;
-	public static float Plusevalue;
-	public static float Marginvalue;
-	public static float Ppeakvalue;
-	public static float Kurtuosis;
+	public static String V_rms = "0.000";
+	public static String Plusevalue = "0.000";
+	public static String Marginvalue = "0.000";
+	public static String Ppeakvalue = "0.000";
+	public static String Kurtuosis = "0.000";
 
-	public static float[] DimensionlessDataFromWeb = new float[6];
+	public static float[] DimensionlessDataFromWeb = {0.000f,0.000f,0.000f,0.000f,0.000f,0.000f};
 
 	public ClassReadPCMdata_From_Web(AudioRecord audioRecord, int recBufSize) {
 		this.audioRecord = audioRecord;
@@ -114,11 +114,11 @@ public class ClassReadPCMdata_From_Web extends Thread {
 //						Log.e("tmpBufFromWeb>>>>>>>>>>>", String.valueOf(tmpBufFromWeb[i]));
 //					}
 
-					DimensionlessDataFromWeb[0] =V_rms;
-					DimensionlessDataFromWeb[1] =Plusevalue;
-					DimensionlessDataFromWeb[2] =Marginvalue;
-					DimensionlessDataFromWeb[3] =Ppeakvalue;
-					DimensionlessDataFromWeb[4] =Kurtuosis;
+					DimensionlessDataFromWeb[0] = Float.parseFloat(V_rms);
+					DimensionlessDataFromWeb[1] = Float.parseFloat(Plusevalue);
+					DimensionlessDataFromWeb[2] = Float.parseFloat(Marginvalue);
+					DimensionlessDataFromWeb[3] = Float.parseFloat(Ppeakvalue);
+					DimensionlessDataFromWeb[4] = Float.parseFloat(Kurtuosis);
 					DimensionlessDataFromWeb[5] =volet[0];
 //					for (int i = 0;i<6;i++){
 //						Log.e("DimensionlessDataFromWeb>>>>>>>>>>>", String.valueOf(DimensionlessDataFromWeb[i]));

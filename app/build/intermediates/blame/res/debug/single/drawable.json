@@ -112,12 +112,12 @@
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
-        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\drawable\\abc_edit_text_material.xml"
-    },
-    {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
         "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\26.0.0-alpha1\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
         "merged": "H:\\AS Workspace\\FaultDiagnosis\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",

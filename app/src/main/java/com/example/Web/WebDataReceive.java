@@ -22,6 +22,7 @@ import static com.example.MyThread.ClassReadPCMdata_From_Web.Ppeakvalue;
 import static com.example.MyThread.ClassReadPCMdata_From_Web.V_rms;
 import static com.example.MyThread.ClassReadPCMdata_From_Web.create_time;
 import static com.example.MyThread.ClassReadPCMdata_From_Web.volet;
+import static java.lang.Float.parseFloat;
 import static java.lang.String.valueOf;
 
 
@@ -41,7 +42,7 @@ public class WebDataReceive {
 
 		//POST请求
 		FormBody formBody = new FormBody.Builder()
-				.add("uid", "001")
+				.add("uid", "1")
 				.build();
 
 		Request request = new Request.Builder()
@@ -73,13 +74,13 @@ public class WebDataReceive {
 						String voletString = dataObject.getString("volet");
 						String voletStringArray[] = voletString.split(",");
 						for (int i = 0;i < voletStringArray.length;i ++){
-							volet[i] = Float.parseFloat(voletStringArray[i]);
+							volet[i] = parseFloat(voletStringArray[i])*10;
 						}
-						V_rms = Float.parseFloat(dataObject.getString("V_rms"));
-						Plusevalue = Float.parseFloat(dataObject.getString("Plusevalue"));
-						Marginvalue = Float.parseFloat(dataObject.getString("Marginvalue"));
-						Ppeakvalue = Float.parseFloat(dataObject.getString("Ppeakvalue"));
-						Kurtuosis = Float.parseFloat(dataObject.getString("Kurtuosis"));
+						V_rms = dataObject.getString("V_rms");
+						Plusevalue = dataObject.getString("Plusevalue");
+						Marginvalue = dataObject.getString("Marginvalue");
+						Ppeakvalue = dataObject.getString("Ppeakvalue");
+						Kurtuosis = dataObject.getString("Kurtuosis");
 						create_time = dataObject.getString("create_time");
 				} catch (JSONException e) {
 					e.printStackTrace();
