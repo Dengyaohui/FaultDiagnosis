@@ -60,14 +60,14 @@ public class ClassDrawPCMdata extends Thread{
 		this.baseLine = baseLine;
 		oldY = baseLine;
 	}
-	public ClassDrawPCMdata(SurfaceView sfv, Paint mPaint, int rateY, int baseLine, short[] historyBuf){
+/*	public ClassDrawPCMdata(SurfaceView sfv, Paint mPaint, int rateY, int baseLine, short[] historyBuf){
 		this.sfv = sfv;
 		this.mPaint = mPaint;
 		this.rateY = rateY;
 		this.baseLine = baseLine;
 		this.historyBuf = historyBuf;
 		oldY = baseLine;
-	}
+	}*/
 
 	/**
 	 * 绘制实时数据

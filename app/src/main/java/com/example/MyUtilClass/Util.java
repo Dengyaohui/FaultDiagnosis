@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import static com.example.MyThread.ClassReadPCMdata_From_Web.volet;
+
 /**
  *
  */
@@ -71,6 +73,18 @@ public class Util extends FragmentActivity {
 				Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
 		intent.setData(Uri.parse("package:" + getPackageName()));
 		startActivity(intent);
+	}
+
+	public static void getData(float[] DimensionlessDataFromWeb,String[] DataFromWeb){
+		for(int i =0; i < DimensionlessDataFromWeb.length - 1; i ++){
+			try {
+				DimensionlessDataFromWeb[i] = Float.parseFloat(DataFromWeb[i]);
+			} catch (Exception e) {
+				DimensionlessDataFromWeb[i] = 0.000f;
+				System.out.println("接收到不规范数据------->" + e.toString());
+			}
+		}
+		DimensionlessDataFromWeb[5] =volet[0];
 	}
 
 }

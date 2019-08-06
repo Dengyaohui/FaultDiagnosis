@@ -45,11 +45,7 @@ public class ClassReadPCMdata_From_Web extends Thread {
 	 */
 	public static float[] volet = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 	public static String create_time = "0000-00-00 00:00：00";
-	public static String V_rms = "0.000";
-	public static String Plusevalue = "0.000";
-	public static String Marginvalue = "0.000";
-	public static String Ppeakvalue = "0.000";
-	public static String Kurtuosis = "0.000";
+	public static String[] DataFromWeb = {"0.000","0.000","0.000","0.000","0.000"};
 
 	public static float[] DimensionlessDataFromWeb = {0.000f,0.000f,0.000f,0.000f,0.000f,0.000f};
 
@@ -113,13 +109,8 @@ public class ClassReadPCMdata_From_Web extends Thread {
 //					for (int i = 0;i < tmpBufFromWeb.length;i ++){
 //						Log.e("tmpBufFromWeb>>>>>>>>>>>", String.valueOf(tmpBufFromWeb[i]));
 //					}
+				getData(DimensionlessDataFromWeb,DataFromWeb);
 
-					DimensionlessDataFromWeb[0] = Float.parseFloat(V_rms);
-					DimensionlessDataFromWeb[1] = Float.parseFloat(Plusevalue);
-					DimensionlessDataFromWeb[2] = Float.parseFloat(Marginvalue);
-					DimensionlessDataFromWeb[3] = Float.parseFloat(Ppeakvalue);
-					DimensionlessDataFromWeb[4] = Float.parseFloat(Kurtuosis);
-					DimensionlessDataFromWeb[5] =volet[0];
 //					for (int i = 0;i<6;i++){
 //						Log.e("DimensionlessDataFromWeb>>>>>>>>>>>", String.valueOf(DimensionlessDataFromWeb[i]));
 //					}
@@ -148,4 +139,15 @@ public class ClassReadPCMdata_From_Web extends Thread {
 //			}
 		}
 	};
+	private void getData(float[] DimensionlessDataFromWeb,String[] DataFromWeb){
+		for(int i =0; i < DimensionlessDataFromWeb.length - 1; i ++){
+			try {
+				DimensionlessDataFromWeb[i] = Float.parseFloat(DataFromWeb[i]);
+			} catch (Exception e) {
+				DimensionlessDataFromWeb[i] = 0.000f;
+				System.out.println("接收到不规范数据------->" + e.toString());
+			}
+		}
+		DimensionlessDataFromWeb[5] =volet[0];
+	}
 }

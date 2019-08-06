@@ -15,11 +15,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static com.example.MyThread.ClassReadPCMdata_From_Web.Kurtuosis;
-import static com.example.MyThread.ClassReadPCMdata_From_Web.Marginvalue;
-import static com.example.MyThread.ClassReadPCMdata_From_Web.Plusevalue;
-import static com.example.MyThread.ClassReadPCMdata_From_Web.Ppeakvalue;
-import static com.example.MyThread.ClassReadPCMdata_From_Web.V_rms;
+import static com.example.MyThread.ClassReadPCMdata_From_Web.DataFromWeb;
 import static com.example.MyThread.ClassReadPCMdata_From_Web.create_time;
 import static com.example.MyThread.ClassReadPCMdata_From_Web.volet;
 import static java.lang.Float.parseFloat;
@@ -69,18 +65,18 @@ public class WebDataReceive {
 				try {
 					JSONObject jsonObject = new JSONObject(jsonString);
 					JSONArray jsonArray = jsonObject.getJSONArray("data");
-//					Log.i("data>>>>>>>>>>>>>>", String.valueOf(jsonArray));
+//						Log.i("data>>>>>>>>>>>>>>", String.valueOf(jsonArray));
 						JSONObject dataObject = (JSONObject) jsonArray.get(0);
 						String voletString = dataObject.getString("volet");
 						String voletStringArray[] = voletString.split(",");
 						for (int i = 0;i < voletStringArray.length;i ++){
 							volet[i] = parseFloat(voletStringArray[i])*10;
 						}
-						V_rms = dataObject.getString("V_rms");
-						Plusevalue = dataObject.getString("Plusevalue");
-						Marginvalue = dataObject.getString("Marginvalue");
-						Ppeakvalue = dataObject.getString("Ppeakvalue");
-						Kurtuosis = dataObject.getString("Kurtuosis");
+						DataFromWeb[0] = dataObject.getString("V_rms");
+						DataFromWeb[1] = dataObject.getString("Plusevalue");
+						DataFromWeb[2] = dataObject.getString("Marginvalue");
+						DataFromWeb[3] = dataObject.getString("Ppeakvalue");
+						DataFromWeb[4] = dataObject.getString("Kurtuosis");
 						create_time = dataObject.getString("create_time");
 				} catch (JSONException e) {
 					e.printStackTrace();
