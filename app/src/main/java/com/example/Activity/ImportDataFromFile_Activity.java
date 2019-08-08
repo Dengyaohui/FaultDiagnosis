@@ -119,6 +119,7 @@ public class ImportDataFromFile_Activity extends Activity implements OnClickList
 	 */
 	private TimeChart timeChart = null;
 	private LinearLayout mChartLayout = null;
+	private TextView DimensionlissDataTime = null;
 	public GraphicalView mGraphicalView = null;
 
 	/**
@@ -139,7 +140,7 @@ public class ImportDataFromFile_Activity extends Activity implements OnClickList
 
 
 		/*给当前Activity贴上滑动窗口,方向为...*/
-		mShowDataDrawer.setSet_mMenuSize(450);                                           //设置drawer大小
+		MenuDrawer.setSet_mMenuSize(500);                                           //设置drawer大小
 		mShowDataDrawer = MenuDrawer.attach(this, Position.TOP);
 		mShowDataDrawer.setContentView(R.layout.activity_show_history_filelist);         //其实函数内是为该activity设置布局的
 		mShowDataDrawer.setMenuView(R.layout.import_data_activity);
@@ -162,10 +163,10 @@ public class ImportDataFromFile_Activity extends Activity implements OnClickList
 			}
 		});
 
-		mCurrentPath = (TextView) findViewById(R.id.file_Path);
+		mCurrentPath = findViewById(R.id.file_Path);
 		mPathLine = findViewById(R.id.file_Path_Line);
-		mReturn = (TextView) findViewById(R.id.file_Return);
-		mFileList = (ListView) findViewById(R.id.file_List);
+		mReturn = findViewById(R.id.file_Return);
+		mFileList = findViewById(R.id.file_List);
 
 		mFileList.setOnItemClickListener(new OnItemClickListener() {
 			@Override
@@ -288,14 +289,15 @@ public class ImportDataFromFile_Activity extends Activity implements OnClickList
 		collection_pointTextView = findViewById(R.id.collection_point);
 		originalDataListView = findViewById(R.id.originalDataListView);
 
-		dataValueTextView1 = findViewById(R.id.bottomData1);
-		dataValueTextView2 = findViewById(R.id.bottomData2);
-		dataValueTextView3 = findViewById(R.id.bottomData3);
-		dataValueTextView4 = findViewById(R.id.bottomData4);
-		dataValueTextView5 = findViewById(R.id.bottomData5);
-		dataValueTextView6 = findViewById(R.id.bottomData6);
+		dataValueTextView1 = findViewById(R.id.HistoryFileData1);
+		dataValueTextView2 = findViewById(R.id.HistoryFileData2);
+		dataValueTextView3 = findViewById(R.id.HistoryFileData3);
+		dataValueTextView4 = findViewById(R.id.HistoryFileData4);
+		dataValueTextView5 = findViewById(R.id.HistoryFileData5);
+		dataValueTextView6 = findViewById(R.id.HistoryFileData6);
 
 		mChartLayout = findViewById(R.id.historyChartView);
+		DimensionlissDataTime = findViewById(R.id.DimensionlissDataTime);
 		timeChart = new TimeChart(Color.CYAN, PointStyle.CIRCLE, "实时采样值", "采样点", "采样值");
 
 	}
@@ -401,7 +403,7 @@ public class ImportDataFromFile_Activity extends Activity implements OnClickList
 		dataValueTextView5.setText(String.valueOf(curDimensionlissData[4]));
 		dataValueTextView6.setText(String.valueOf(curDimensionlissData[5]));
 
-		historyDateTextView.setText(historyFileDate);
+		DimensionlissDataTime.setText("当前数据："+historyFileDate);
 	}
 
 	/**
