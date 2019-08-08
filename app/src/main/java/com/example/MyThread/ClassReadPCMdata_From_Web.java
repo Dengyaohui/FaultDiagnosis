@@ -117,13 +117,13 @@ public class ClassReadPCMdata_From_Web extends Thread {
 
 					//采集中
 					//保存原始数据
-					new ClassSavePCMdata(tmpBufFromWeb, "云端每秒原始数据", curTime + ".pcm", GlobleVariable.PER_1S_HISTORY_FILE_MAX_NUM).start();
+					new ClassSavePCMdata(tmpBufFromWeb, "每秒原始数据", curTime + ".pcm", GlobleVariable.PER_1S_HISTORY_FILE_MAX_NUM).start();
 					//计算并保存无量纲指标值
-					new ClassSaveDimensionless_Parameter_Data(DimensionlessDataFromWeb, "云端每秒无量纲指标", curTime + ".txt", GlobleVariable.PER_1S_DIMENSION_LESS_FILE_MAX_NUM).start();
+					new ClassSaveDimensionless_Parameter_Data(DimensionlessDataFromWeb, "每秒无量纲指标", curTime + ".txt", GlobleVariable.PER_1S_DIMENSION_LESS_FILE_MAX_NUM).start();
 
 					if (GlobleVariable.WebSecondCount == 300) {
-						new ClassSavePCMdata(tmpBufFromWeb, "云端每5分钟原始数据", curTime + ".pcm", GlobleVariable.PER_5MIN_HISTORY_FILE_MAX_NUM).start();
-						new ClassSaveDimensionless_Parameter_Data(DimensionlessDataFromWeb, "云端每5分钟无量纲指标", curTime + ".txt", GlobleVariable.PER_5MIN_DIMENSION_LESS_FILE_MAX_NUM).start();
+						new ClassSavePCMdata(tmpBufFromWeb, "每5分钟原始数据", curTime + ".pcm", GlobleVariable.PER_5MIN_HISTORY_FILE_MAX_NUM).start();
+						new ClassSaveDimensionless_Parameter_Data(DimensionlessDataFromWeb, "每5分钟无量纲指标", curTime + ".txt", GlobleVariable.PER_5MIN_DIMENSION_LESS_FILE_MAX_NUM).start();
 						GlobleVariable.SecondCount = 0;
 					}
 				}

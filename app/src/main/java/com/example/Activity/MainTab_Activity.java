@@ -180,6 +180,9 @@ public class MainTab_Activity extends TabActivity implements OnClickListener,OnC
 	}
 
 
+	/**
+	* 点击切换页面
+	* */
 	@Override
 	public void onCheckedChanged(CompoundButton radionButton, boolean isChecked) {
 		// TODO Auto-generated method stub

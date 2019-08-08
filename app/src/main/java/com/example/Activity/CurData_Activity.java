@@ -379,12 +379,12 @@ public class CurData_Activity extends Activity implements OnClickListener{
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
-			curDataFromWeb = getNewestSecondData(GlobleVariable.WEB_CUR_ORIGINAL_DATA_PER_1S);
+			curDataFromWeb = getNewestSecondData(GlobleVariable.CUR_ORIGINAL_DATA_PER_1S);
 //			curDataFromWeb = tmpBufFromWeb;
 //			for (int i = 0;i < curDataFromWeb.length;i ++){
 //				Log.e("curData>>>>>>>>>>>", String.valueOf(curDataFromWeb[i]));
 //			}
-			curDimensionlissData = getNewestSecondDimensionlessData(GlobleVariable.WEB_CUR_DIMENSION_LESS_PER_1S);
+			curDimensionlissData = getNewestSecondDimensionlessData(GlobleVariable.CUR_DIMENSION_LESS_PER_1S);
 //			curDimensionlissData = DimensionlessDataFromWeb;
 
 //			for (int i = 0;i < curDimensionlissData.length;i ++){

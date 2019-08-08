@@ -81,27 +81,27 @@
         </LinearLayout>
     </LinearLayout>
     <!-- 三个操作按钮 -->
-    <LinearLayout 
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
         >
         <!-- 显示波形 -->
-        <LinearLayout 
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical"
             >
-            <ImageButton 
+            <ImageButton
             android:id="@+id/showWaveBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/showwave_button"
             android:background="#00000000"
             />
-            <TextView 
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -110,21 +110,21 @@
                 />
         </LinearLayout>
         <!-- 上一个数据 -->
-        <LinearLayout 
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical"
             >
-            <ImageButton 
+            <ImageButton
             android:id="@+id/lastDataBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/lastdata_button"
             android:background="#00000000"
             />
-            <TextView 
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -134,21 +134,21 @@
                 />
         </LinearLayout>
         <!-- 下一个数据 -->
-        <LinearLayout 
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical"
             >
-            <ImageButton 
+            <ImageButton
             android:id="@+id/nextDataBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/nextdata_button"
             android:background="#00000000"
             />
-            <TextView 
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -157,6 +157,174 @@
                 />
         </LinearLayout>
     </LinearLayout>
+    <!-- 无量纲指标 -->
+    <LinearLayout
+        android:id="@+id/DimensionlissDataFromFiles"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#2C3E50"
+        >
+        <!-- 烈度 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="烈度"
+                android:textSize="18sp"
+                android:background="#D0D0D0"
+                />
+            <TextView
+                android:id="@+id/HistoryFileData1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0.000"
+                android:textSize="18sp"
+                android:textColor="#a0f9e9"
+                />
+        </LinearLayout>
+        <!-- 脉冲 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="脉冲"
+                android:textSize="18sp"
+                android:background="#D0D0D0"
+                />
+            <TextView
+                android:id="@+id/HistoryFileData2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="0.000"
+                android:textSize="18sp"
+                android:textColor="#a0f9e9"
+                />
+        </LinearLayout>
+        <!-- 欲度 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="欲度"
+                android:textSize="18sp"
+                android:background="#D0D0D0"
+                />
+            <TextView
+                android:id="@+id/HistoryFileData3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="0.000"
+                android:textSize="18sp"
+                android:textColor="#a0f9e9"
+                />
+        </LinearLayout>
+        <!-- 峰值 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="峰值"
+                android:textSize="18sp"
+                android:background="#D0D0D0"
+                />
+            <TextView
+                android:id="@+id/HistoryFileData4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="0.000"
+                android:textSize="18sp"
+                android:textColor="#a0f9e9"
+                />
+        </LinearLayout>
+        <!-- 峭度 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="峭度"
+                android:textSize="18sp"
+                android:background="#D0D0D0"
+                />
+            <TextView
+                android:id="@+id/HistoryFileData5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0.000"
+                android:textSize="18sp"
+                android:textColor="#a0f9e9"
+                />
+        </LinearLayout>
+        <!-- 波形 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="波形"
+                android:textSize="18sp"
+                android:background="#D0D0D0"
+                />
+            <TextView
+                android:id="@+id/HistoryFileData6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0.000"
+                android:textSize="18sp"
+                android:textColor="#a0f9e9"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 数据的收录时间 -->
+    <TextView
+        android:id="@+id/DimensionlissDataTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:gravity="right"
+        >
+    </TextView>
     <!-- 数据图表 -->
     <LinearLayout
         android:id="@+id/historyChartView"
@@ -169,164 +337,6 @@
         android:orientation="vertical"
         android:background="#25282e"
         >
-    </LinearLayout>
-    <!-- 无量纲指标 -->
-    <LinearLayout 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#2C3E50"
-        >
-        <!-- 烈度 -->
-        <LinearLayout 
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            >
-            <TextView 
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="烈度"
-                android:textSize="18sp"
-                android:background="#D0D0D0"
-                />
-            <TextView
-                android:id="@+id/bottomData1"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="0.000"
-                android:textSize="18sp"
-                android:textColor="#a0f9e9"
-                />
-        </LinearLayout>
-        <!-- 脉冲 -->
-        <LinearLayout 
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            >
-            <TextView 
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="脉冲"
-                android:textSize="18sp"
-                android:background="#D0D0D0"
-                />
-            <TextView 
-                android:id="@+id/bottomData2"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:gravity="center"
-                android:text="0.000"
-                android:textSize="18sp"
-                android:textColor="#a0f9e9"
-                />
-        </LinearLayout>
-        <!-- 欲度 -->
-        <LinearLayout 
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            >
-            <TextView 
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="欲度"
-                android:textSize="18sp"
-                android:background="#D0D0D0"
-                />
-            <TextView 
-                android:id="@+id/bottomData3"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:gravity="center"
-                android:text="0.000"
-                android:textSize="18sp"
-                android:textColor="#a0f9e9"
-                />
-        </LinearLayout>
-        <!-- 峰值 -->
-        <LinearLayout 
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            >
-            <TextView 
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="峰值"
-                android:textSize="18sp"
-                android:background="#D0D0D0"
-                />
-            <TextView 
-                android:id="@+id/bottomData4"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:gravity="center"
-                android:text="0.000"
-                android:textSize="18sp"
-                android:textColor="#a0f9e9"
-                />
-        </LinearLayout>
-        <!-- 峭度 -->
-        <LinearLayout 
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            >
-            <TextView 
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="峭度"
-                android:textSize="18sp"
-                android:background="#D0D0D0"
-                />
-            <TextView 
-                android:id="@+id/bottomData5"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="0.000"
-                android:textSize="18sp"
-                android:textColor="#a0f9e9"
-                />
-        </LinearLayout>
-        <!-- 波形 -->
-        <LinearLayout 
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            >
-            <TextView 
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="波形"
-                android:textSize="18sp"
-                android:background="#D0D0D0"
-                />
-            <TextView 
-                android:id="@+id/bottomData6"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="0.000"
-                android:textSize="18sp"
-                android:textColor="#a0f9e9"
-                />
-        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
